@@ -12,9 +12,6 @@ import * as bulmaToast from 'bulma-toast'
 import VueLoading from 'vuejs-loading-plugin'
 import bFormSlider from 'vue-bootstrap-slider';
 import Vue2Filters from 'vue2-filters'
-import IconCrypto from "vue-cryptocurrency-icons";
-import Cryptoicon from 'vue-cryptoicon';
-import icon from 'vue-cryptoicon/src/icons';
 
 
 Vue.config.productionTip = false
@@ -34,15 +31,15 @@ Vue.mixin({
 import router from './router';
 // plugin setup
 
-axios.defaults.baseURL = 'https://devduel.ir/api/v1/'
+axios.defaults.baseURL = 'https://ryanbits.ir/sapi/v1/'
 
 
-Cryptoicon.add(icon);
-Vue.use(Cryptoicon);
+
+
 Vue.use(BootstrapVue)
 Vue.use(Vue2Filters)
 Vue.use(Vuex)
-Vue.use(IconCrypto);
+
 Vue.use(bFormSlider)
 Vue.use(DashboardPlugin);
 

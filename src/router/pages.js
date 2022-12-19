@@ -3,8 +3,7 @@ import adminLayout2 from '@/layout/adminLayout2'
 import LayoutWithoutSidenav from '@/layout/LayoutWithoutSidenav'
 import LayoutBlank from '@/layout/LayoutBlank'
 import sampleLayout from '@/views/Pages/sampleLayout.vue';
-import NotFound from '@/views/NotFoundPage.vue';
-import AuthLayout from '@/views/Pages/AuthLayout.vue';
+import NotFound from '@/components/NotFound.vue';
 
 export default [{
   // Layout 2
@@ -15,22 +14,6 @@ export default [{
       {
         path: '/',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Index.vue')
-      },
-      {
-        path: 'a',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Index1.vue')
-      },
-      {
-        path: 'b',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Index2.vue')
-      },
-      {
-        path: 'c',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Index3.vue')
-      },
-      {
-        path: 'd',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Index4.vue')
       },
       {
         path: 'news',

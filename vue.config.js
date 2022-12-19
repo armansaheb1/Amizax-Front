@@ -59,7 +59,6 @@ module.exports = {
     /\bvuedraggable\b/,
     /\bdropzone\b/,
     /\bmarked\b/,
-    /\bvue-plyr\b/,
     /\bswiper\b/,
     /\bdom7\b/
   ],
