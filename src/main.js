@@ -31,7 +31,7 @@ Vue.mixin({
 import router from './router';
 // plugin setup
 
-axios.defaults.baseURL = 'https://ryanbits.ir/sapi/v1/'
+axios.defaults.baseURL = 'http://80.71.149.175/api/v1/'
 
 
 
