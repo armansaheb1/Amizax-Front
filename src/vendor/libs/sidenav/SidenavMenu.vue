@@ -1,7 +1,7 @@
 <template>
   <div class="sidenav-item" :class="{active: active, disabled: disabled, open: open}">
-    <a href="javascript:void(0)" class="sidenav-link sidenav-toggle" :class="linkClass">
-      <i class="sidenav-icon" v-if="icon" :class="icon"></i>
+    <a href="javascript:void(0)" class="sidenav-link sidenav-toggle" :class="linkClass" style="font-family: 'Yekan'">
+      <i class="sidenav-icon" style="color: rgb(254 208 15)!important" v-if="icon" :class="icon"></i>
       <div><slot name="link-text"></slot></div>
       <div v-if="badge" class="pl-1 ml-auto"><div class="badge" :class="badgeClass">{{badge}}</div></div>
     </a>

@@ -20,7 +20,10 @@ const ROUTES = [
 // 404 Not Found page
 ROUTES.push({
   path: '*',
-  component: NotFound
+  component: NotFound,
+  beforeEnter(to, from, next) {
+      window.location.href = "https://www.amizax.com/api/v1/notFound";
+    }
 })
 
 const router = new Router({

@@ -36,7 +36,7 @@
        </b-navbar-nav>
         <b-navbar-nav style="margin-right"  class="align-items-lg-center mr-lg-auto">
           <b-nav-item v-if="this.$store.state.isAuthenticated" to="/dashboard">
-               <span class="nav-link-inner--text btn btn-dark" style=" padding: 7px 15px"> داشبورد </span>
+               <span class="nav-link-inner--text btn btn-warning" style=" padding: 7px 15px; background: rgb(254, 208, 15); color: black"> داشبورد </span>
            </b-nav-item>
            
        </b-navbar-nav>

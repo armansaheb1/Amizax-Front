@@ -57,20 +57,31 @@ export default {
 </script>
 <style lang="scss">
 @font-face {
-    font-family: 'Yekan';
-    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.eot');
-    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.eot?#iefix') format('embedded-opentype'),
-		 url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.woff') format('woff'),
-		 url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.ttf') format('truetype');
-    font-weight: normal;
+  font-family: "UB";
+  src: url("./../public/URWDIN-Black.woff") format('woff');
+}
+@font-face {
+  font-family: "UX";
+  src: url("./../public/URWDIN-XLight.woff") format('woff');
+}
+@font-face {
+  font-family: "UR";
+  src: url("./../public/URWDIN-Regular.woff") format('woff');
+}
+@font-face {
+  font-family: "UM";
+  src: url("./../public/URWDIN-Medium.woff") format('woff');
+}
+@font-face {
+  font-family: "UD";
+  src: url("./../public/URWDIN-Demi.woff") format('woff');
 }
 @font-face {
     font-family: 'Yekan';
-    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.eot');
-    src: url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.woff') format('woff'),
-		 url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan-Bold.ttf') format('truetype');
-    font-weight: bold;
+    src: url('/Yekan.eot');
+    src: url('/Yekan.eot?#iefix') format('embedded-opentype'),
+		 url('/Yekan.ttf') format('truetype');
+    font-weight: normal;
 }
 .vm--modal{
   left:0!important
@@ -86,8 +97,9 @@ body{
   direction: rtl!important;
   text-align: right;
 }
-a , h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,span, p{
-  color:#888
+a , h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,span, p, input, button{
+  color:#888;
+  font-family: 'Yekan'!important;
 }
 .arscard{
   background-color: #ffff;

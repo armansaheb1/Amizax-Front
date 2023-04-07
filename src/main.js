@@ -31,7 +31,7 @@ Vue.mixin({
 import router from './router';
 // plugin setup
 
-axios.defaults.baseURL = 'http://80.71.149.175/api/v1/'
+axios.defaults.baseURL = 'https://www.amizax.com/api/v1/'
 
 
 
@@ -47,10 +47,10 @@ const store = new Vuex.Store({
   state: {
     brands: [''],
     amount: [0],
-    dark : false
+    dark: false
   },
   mutations: {
-    initializeStore (state) {
+    initializeStore(state) {
       if (localStorage.getItem('token')) {
         state.token = localStorage.getItem('token')
         state.isAuthenticated = true
@@ -66,29 +66,29 @@ const store = new Vuex.Store({
         state.isAdmin = false
       }
     },
-    setToken (state, token) {
+    setToken(state, token) {
       state.token = token
       state.isAuthenticated = true
     },
-    clearbrands (state) {
+    clearbrands(state) {
       state.brands = []
       state.amount = []
     },
-    appendbrands (state, brand) {
+    appendbrands(state, brand) {
       state.brands.push(brand)
     },
-    appendamount (state, amount) {
+    appendamount(state, amount) {
       state.amount.push(amount)
     },
-    setAdmin (state, admin) {
+    setAdmin(state, admin) {
       state.Admin = admin
       state.isAdmin = true
     },
-    removeToken (state) {
+    removeToken(state) {
       state.token = ''
       state.isAuthenticated = false
     },
-    removeAdmin (state) {
+    removeAdmin(state) {
       state.Admin = ''
       state.isAdmin = false
     }
@@ -105,7 +105,7 @@ new Vue({
 Vue.use(store)
 Vue.use(VueSweetalert2);
 Vue.use(VModal)
-Vue.use(VueLoading , {
-  text: 'لطفا کمی صبر کنید', 
+Vue.use(VueLoading, {
+  text: 'لطفا کمی صبر کنید',
   background: 'rgba(0,0,0,0.5)',
 })

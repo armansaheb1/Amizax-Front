@@ -88,7 +88,7 @@
         
 
         <div v-else>
-          <div v-if="email | hide2"  class="chat-btn" style="background:#efefef;border-radius:50%; box-shadow: 2px 1px 2px 1px grey">
+          <div v-if="email | hide2"  class="chat-btn" style="background:#efefef;border-radius:50%; box-shadow: .5px .5px .5px .5px grey">
             <span  v-if="notread" style="width:22px;height:22px;border-radius:50%; background:red; position:absolute ;text-align:center; color:white ; font-family:'arial'">{{notread}}</span>
             <img @click="startChatSession" style="border-radius:10%;width:70%;height:70%; margin:15%" src="/img/chat.png">
             </div>
