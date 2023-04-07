@@ -59,7 +59,7 @@
         <tbody>
           <tr v-for="(section) in wallets" v-bind:key="section.name">
                   <td v-if="section.brand === 'USDT'" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
-                  <img style="width:48px" class="" :src="`/static/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/static/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
+                  <img style="width:48px" class="" :src="`/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
                   </router-link></td>
                   <td v-if="section.brand === 'USDT'" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) === 0)">0</a> <a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)">{{parseFloat(section.balance).toFixed(6)}}</a></router-link></td>
                   <td v-if="section.brand === 'USDT'" style="font-family:'arial'"><br><a v-if="USDTprice">{{USDTprice}}</a></td>
@@ -67,7 +67,7 @@
           </tr>
           <tr v-for="(section) in wallets" v-bind:key="section.name">
                   <td v-if="section.brand !== 'USDT' && (parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
-                  <img style="width:48px" class="" :src="`/static/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/static/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
+                  <img style="width:48px" class="" :src="`/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
                   </router-link></td>
                   <td v-if="section.brand !== 'USDT' && (parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) === 0)">0</a> <a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)">{{parseFloat(section.balance).toFixed(6)}}</a></router-link></td>
                   <td v-if="section.brand !== 'USDT' && (parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)" style="font-family:'arial'"><br><a v-if="prices[section.brand + 'USDT']">{{prices[section.brand + 'USDT'].buy}}</a></td>
@@ -75,7 +75,7 @@
           </tr>
           <tr v-for="(section) in wallets" v-bind:key="section.name">
                   <td v-if="section.brand !== 'USDT' && (section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && (parseFloat(parseFloat(section.balance).toFixed(6)) === 0))" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
-                  <img style="width:48px" class="" :src="`/static/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/static/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
+                  <img style="width:48px" class="" :src="`/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
                   </router-link></td>
                   <td v-if="section.brand !== 'USDT' && (section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && (parseFloat(parseFloat(section.balance).toFixed(6)) === 0))" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) === 0)">0</a> <a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)">{{parseFloat(section.balance).toFixed(6)}}</a></router-link></td>
                   <td v-if="section.brand !== 'USDT' && (section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && (parseFloat(parseFloat(section.balance).toFixed(6)) === 0))" style="font-family:'arial'"><br><a v-if="prices[section.brand + 'USDT']">{{prices[section.brand + 'USDT'].buy}}</a></td>
@@ -84,7 +84,7 @@
           
           <tr v-for="(section) in wallets" v-bind:key="section.id">
                   <td v-if="section.brand !== 'USDT' && !(section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && (parseFloat(parseFloat(section.balance).toFixed(6)) === 0)" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
-                  <img style="width:48px" class="" :src="`/static/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/static/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
+                  <img style="width:48px" class="" :src="`/icons/color/${section.brand.toLowerCase()}.svg`" :onerror="`javascript:this.src='/icons/color/${section.brand.toLowerCase()}.png';`"  alt=""><br>{{section.brand}}
                   </router-link></td>
                   <td v-if="section.brand !== 'USDT' && !(section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && (parseFloat(parseFloat(section.balance).toFixed(6)) === 0)" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) === 0)">0</a> <a v-if="(parseFloat(parseFloat(section.balance).toFixed(6)) !== 0)">{{parseFloat(section.balance).toFixed(6)}}</a></router-link></td>
                   <td v-if="section.brand !== 'USDT' && !(section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && (parseFloat(parseFloat(section.balance).toFixed(6)) === 0)" style="font-family:'arial'"><br><a v-if="prices[section.brand + 'USDT']">{{prices[section.brand + 'USDT'].buy}}</a></td>
