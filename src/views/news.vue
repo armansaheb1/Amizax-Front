@@ -8,7 +8,7 @@
         <b-col style="background:none!important">
           <div style="width:65% ; height: 150px ;margin:auto; text-align:center">
             <div class="d-md-none" style="margin:50px"></div>
-            <h2 style="font:45px 'arial';color:white">AMIZAX EXCHNGE</h2>
+            <h2 style="font:45px 'UD';color:white">AMIZAX EXCHNGE</h2>
             <h2 style="color:white">Best Place To Learn And To Trade CryptoCurrencies</h2>
           </div>
         </b-col>

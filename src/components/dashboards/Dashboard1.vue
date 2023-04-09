@@ -11,7 +11,7 @@
 
         <b-card class="mb-4">
           <div class="d-flex align-items-center">
-            <div class="lnr lnr-cart display-4 text-success"></div>
+            <div class="lnr lnr-briefcase display-4 text-success" style="color: rgb(254, 208, 15) !important"></div>
             <div class="ml-4">
               <div class="text-muted small">دارایی ریالی</div>
               <div class="text-large" ><a v-if="dashboardinfo.balance" style="font-family: 'UR'!important">{{parseInt(dashboardinfo.balance).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</a> <a v-if="!dashboardinfo.balance">0</a> ریال</div>
@@ -22,7 +22,7 @@
         <div class="col-sm-6 col-xl-6">
         <b-card class="mb-4">
           <div class="d-flex align-items-center">
-            <div class="lnr lnr-cart display-4 text-success"></div>
+            <div class="lnr lnr-database display-4 text-success" style="color: rgb(254, 208, 15) !important"></div>
             <div class="ml-4">
               <div class="text-muted small">مجموع دارایی دیجیتال به دلار</div>
               <div class="text-large"><a v-if="dashboardinfo.usbalance" style="font-family: 'UR'!important">{{parseInt(dashboardinfo.usbalance)}}</a> <a v-if="!dashboardinfo.usbalance">0</a> $</div>
@@ -41,7 +41,7 @@
          </b-card-header>
          <div style="direction:rtl" class="input-group mb-3">
   <div class="input-group-prepend">
-    <button class="btn btn-outline-success" type="button">copy</button>
+    <button class="btn btn-outline-warning" type="button">copy</button>
   </div>
   <input style="text-align:center" :value="referalid" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
 </div>

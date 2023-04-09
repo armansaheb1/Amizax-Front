@@ -9,7 +9,7 @@
       <fieldset class="demo-vertical-spacing-sm">
         <b-form-group>
           <label style="width:20%" > حساب تتر</label>
-          <b-select style="float:left;width:80%;font-family:'arial'" plain v-model="usdtaccount">
+          <b-select style="float:left;width:80%;font-family:'UD'!important" plain v-model="usdtaccount">
             <option v-for="(item, idx) of usdt" v-bind:key="idx" style="padding:10px;text-align:left;font-size:20px;height:30px" :value="item[1]">
               {{item.get_currency}} - ({{item.amount}}USDT)
             </option>
@@ -17,7 +17,7 @@
           <div style="clear:both"></div>
         </b-form-group>
         <b-form-group label="">
-          <b-input style="width:80%;float:left;font-family:'arial'" step="any" type="number" v-model="amount" placeholder="" /><label style="width:20%">مقدار</label>
+          <b-input style="width:80%;float:left;font-family:'UD'!important" step="any" type="number" v-model="amount" placeholder="" /><label style="width:20%">مقدار</label>
         </b-form-group>
         <div style="clear:both"></div>
         <div style="clear:both"></div><br>
@@ -39,16 +39,16 @@
         <b-form-group>
           <p style="margin-right:20%">موجودی : <button style="padding:2px 30px;" class="btn btn-light">{{balance}}</button></p>
           <label style="width:20%" >از</label>
-          <b-input style="width:80%;float:left;font-family:'arial'" readonly value="حساب اصلی"></b-input>
+          <b-input style="width:80%;float:left;font-family:'UD'!important" readonly value="حساب اصلی"></b-input>
           <div style="clear:both"></div>
         </b-form-group>
         <b-form-group label="">
-          <b-input style="width:80%;float:left;font-family:'arial'" step="any" type="number" v-model="amount1" placeholder="" /><label style="width:20%">مقدار</label>
+          <b-input style="width:80%;float:left;font-family:'UD'!important" step="any" type="number" v-model="amount1" placeholder="" /><label style="width:20%">مقدار</label>
         </b-form-group>
         <div style="clear:both"></div>
         <b-form-group>
           <label style="width:20%" >به</label>
-          <b-select style="float:left;width:80%;font-family:'arial'" plain v-model="toaccount1">
+          <b-select style="float:left;width:80%;font-family:'UD'!important" plain v-model="toaccount1">
             <option v-for="(item, idx) of to" v-bind:key="idx" style="padding:10px;text-align:left;font-size:20px;height:30px" :value="item[1]">
               {{item[0]}}
             </option>
@@ -66,7 +66,7 @@
         <b-form-group>
           <p style="margin-right:20%">موجودی : <button style="padding:2px 30px;" class="btn btn-light">{{coinbalance}}</button></p>
           <label style="width:20%" >از</label>
-          <b-select style="float:left;width:80%;font-family:'arial'" plain v-model="fromaccount2" @change="getcoinbalance(fromaccount2)">
+          <b-select style="float:left;width:80%;font-family:'UD'!important" plain v-model="fromaccount2" @change="getcoinbalance(fromaccount2)">
             <option v-for="(item, index) of from" v-bind:key="index" style="padding:10px;text-align:left;font-size:20px;height:30px" :value="item[1]">
               {{item[0]}}
             </option>
@@ -74,12 +74,12 @@
           <div style="clear:both"></div>
         </b-form-group>
         <b-form-group label="">
-          <b-input style="width:80%;float:left;font-family:'arial'" step="any" type="number" v-model="amount2" placeholder="" /><label style="width:20%">مقدار</label>
+          <b-input style="width:80%;float:left;font-family:'UD'!important" step="any" type="number" v-model="amount2" placeholder="" /><label style="width:20%">مقدار</label>
         </b-form-group>
         <div style="clear:both"></div>
         <b-form-group>
           <label style="width:20%" >به</label>
-          <b-input style="width:80%;float:left;font-family:'arial'" readonly value="حساب اصلی"></b-input>
+          <b-input style="width:80%;float:left;font-family:'UD'!important" readonly value="حساب اصلی"></b-input>
           <div style="clear:both"></div>
         </b-form-group><br>
         <div style="clear:both"></div><br>

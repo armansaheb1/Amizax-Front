@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <input class="form-control" type="search" placeholder="search..." style="textalign:left;direction:ltr;font-family:'arial'" @input="search()" v-model="searchtext"><br>
+    <input class="form-control" type="search" placeholder="search..." style="textalign:left;direction:ltr;font-family:'UD'!important" @input="search()" v-model="searchtext"><br>
       <b-card no-body>
         <div class="table-responsive">
         <table class="table" style="direction:rtl!important">
@@ -14,18 +14,18 @@
           </thead>
         <tbody>
           <tr v-for="(section) in wallets" v-bind:key="section.name">
-                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`/cpwallets/${section.name}`" class="text-big font-weight-semibold" >
+                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'" style="width:15%;font-wieght:bold;font-family:'UD'!important;font-size:20px"><router-link :to="`/cpwallets/${section.name}`" class="text-big font-weight-semibold" >
                   {{section.brand}}
                   </router-link></td>
-                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`/cpwallets/${section.name}`"><a v-if="!section.balance">0</a> {{section.balance}}</router-link></td>
-                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'" style="padding:0;font-family:'arial';font-size:14px"><router-link  :to="`/cpwallets/${section.name}/withdraw`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">برداشت</router-link><router-link :to="`/cpwallets/${section.name}/history`"  class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'"> تاریخچه </router-link><router-link v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'"  :to="`/cpwallets/${section.name}/deposit`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">واریز</router-link></td>
+                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`/cpwallets/${section.name}`"><a v-if="!section.balance">0</a> {{section.balance}}</router-link></td>
+                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'" style="padding:0;font-family:'UD'!important;font-size:14px"><router-link  :to="`/cpwallets/${section.name}/withdraw`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">برداشت</router-link><router-link :to="`/cpwallets/${section.name}/history`"  class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'"> تاریخچه </router-link><router-link v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'"  :to="`/cpwallets/${section.name}/deposit`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">واریز</router-link></td>
           </tr>
           <tr v-for="(section) in wallets" v-bind:key="section.id">
-                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX')" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`/cpwallets/${section.name}`" class="text-big font-weight-semibold" >
+                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX')" style="width:15%;font-wieght:bold;font-family:'UD'!important;font-size:20px"><router-link :to="`/cpwallets/${section.name}`" class="text-big font-weight-semibold" >
                   {{section.brand}}
                   </router-link></td>
-                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX')" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`/cpwallets/${section.name}`"><a v-if="!section.balance">0</a> {{section.balance}}</router-link></td>
-                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX')" style="padding:0;font-family:'arial';font-size:14px"><router-link  :to="`/cpwallets/${section.name}/withdraw`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">برداشت</router-link><router-link :to="`/wallets/${section.name}/history`"  class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'"> تاریخچه </router-link><router-link v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'"  :to="`/wallets/${section.name}/deposit`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">واریز</router-link></td>
+                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX')" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`/cpwallets/${section.name}`"><a v-if="!section.balance">0</a> {{section.balance}}</router-link></td>
+                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX')" style="padding:0;font-family:'UD'!important;font-size:14px"><router-link  :to="`/cpwallets/${section.name}/withdraw`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">برداشت</router-link><router-link :to="`/wallets/${section.name}/history`"  class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'"> تاریخچه </router-link><router-link v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX'"  :to="`/wallets/${section.name}/deposit`" class="btnfont btn btn-dark walbtn" style="font:16px 'Yekan'">واریز</router-link></td>
           </tr>
         </tbody>
             </table>
@@ -125,7 +125,7 @@ export default {
   text-align: center;
 }
 .btnfont{
-  font-family: 'arial';
+  font-family: 'UD';
   font-size: 12px;
   padding: 9px;
   margin: 2px;

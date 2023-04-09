@@ -23,8 +23,8 @@
               <div v-if="String(section.act) === '1'" style="color:red" class="col-2 cent alert alert-secondary">{{String(section.act).replace('0','در حال پیگیری').replace('2','انجام شده').replace('1','رد شده')}}</div>
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-1 cent">{{section.currency}}</div>
-              <div class="col-2 cent" style="font:12px 'arial'">{{section.ramount}}</div>
-              <div class="col-3 cent" style="font:12px 'arial'">{{section.camount}}</div>
+              <div class="col-2 cent" style="font:12px 'UD'">{{section.ramount}}</div>
+              <div class="col-3 cent" style="font:12px 'UD'">{{section.camount}}</div>
               <div class="col-2 cent">{{section.get_age}}</div>
             </div>
             <div class="row no-gutters align-items-center" style="margin:0;margin-top:15px">
@@ -65,8 +65,8 @@
               <div v-if="String(section.act) === '1'" style="color:red" class="col-2 cent alert alert-secondary">{{String(section.act).replace('0','در حال پیگیری').replace('2','انجام شده').replace('1','رد شده')}}</div>
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-1 cent">{{section.currency}}</div>
-              <div class="col-2 cent" style="font:12px 'arial'">{{section.ramount}}</div>
-              <div class="col-3 cent" style="font:12px 'arial'">{{section.camount}}</div>
+              <div class="col-2 cent" style="font:12px 'UD'">{{section.ramount}}</div>
+              <div class="col-3 cent" style="font:12px 'UD'">{{section.camount}}</div>
               <div class="col-2 cent">{{section.get_age}}</div>
             </div>
             <div class="row no-gutters align-items-center" style="margin:0;margin-top:15px">

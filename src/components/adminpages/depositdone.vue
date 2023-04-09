@@ -19,8 +19,8 @@
             <div class="row no-gutters align-items-center">
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-2 cent">{{section.currency}}</div>
-              <div class="col-3 cent" style="font:12px 'arial'">{{section.amount}}</div>
-              <div class="col-3 cent" style="font:12px 'arial'">{{section.hash}}</div>
+              <div class="col-3 cent" style="font:12px 'UD'">{{section.amount}}</div>
+              <div class="col-3 cent" style="font:12px 'UD'">{{section.hash}}</div>
               <div class="col-2 cent">{{section.get_age}}</div>
             </div>
 

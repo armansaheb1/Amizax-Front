@@ -21,9 +21,9 @@
             <div class="row no-gutters align-items-center">
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-2 cent">{{section.currency}}</div>
-              <div class="col-1 cent" style="font:12px 'arial'">{{section.camount}}</div>
+              <div class="col-1 cent" style="font:12px 'UD'">{{section.camount}}</div>
               <div class="col-2 cent">{{section.currency2}}</div>
-              <div class="col-1 cent" style="font:12px 'arial'">{{section.camount2}}</div>
+              <div class="col-1 cent" style="font:12px 'UD'">{{section.camount2}}</div>
               <div class="col-2 cent">{{section.get_age}}</div>
               <div class="col-2 cent"><form @submit="accept(section.id)"><button type="submit" class="btn btn-success" style="width:100%; float:left">تایید</button></form><button @click="reject(section.id)" class="btn btn-danger " style="width:100%; float:left">رد</button></div>
             </div>

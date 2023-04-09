@@ -6,7 +6,7 @@
     :exact="exact">
     <div class="sidenav-item" :class="{active: active || isActive || isExactActive, disabled: disabled}">
       <a class="sidenav-link" :class="linkClass" :href="href" @click="navigate" @keypress.enter="navigate" style="font-family: 'Yekan'">
-        <i class="sidenav-icon" style="color: rgb(254 208 15)!important" v-if="icon" :class="icon"></i>
+        <i class="sidenav-icon" style="color: rgb(254 208 15)!important; font-size: 18px" v-if="icon" :class="icon"></i>
         <div><slot></slot></div>
         <div v-if="badge" class="pl-1 ml-auto"><div class="badge" :class="badgeClass">{{badge}}</div></div>
       </a>

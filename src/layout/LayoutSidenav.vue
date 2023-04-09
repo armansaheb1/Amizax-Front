@@ -18,22 +18,22 @@
     <div class="sidenav-inner" :class="{ 'py-1': orientation !== 'horizontal' }">
 
       <!-- Dashboards -->
-        <sidenav-router-link icon="ion ion-md-speedometer" to="/dashboard" :exact="true">داشبورد</sidenav-router-link>
+        <sidenav-router-link icon="fa-solid fa-gauge" to="/dashboard" :exact="true">داشبورد</sidenav-router-link>
 
 
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">ناحیه کاربری</sidenav-header>
 
-      <sidenav-router-link icon="ion ion-md-person" to="/user" :exact="true">اطلاعات کاربر</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-checkbox" to="/user-level" :exact="true"> تایید هویت</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-lock" to="/user-security" :exact="true"> امنیت</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-circle-user" to="/user" :exact="true">اطلاعات کاربر</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-circle-check" to="/user-level" :exact="true"> تایید هویت</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-shield" to="/user-security" :exact="true"> امنیت</sidenav-router-link>
       
       
       
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">مالی</sidenav-header>
-      <sidenav-router-link icon="ion ion-logo-bitcoin" to="/wallets" :exact="true">کیف های من</sidenav-router-link>
-      <sidenav-menu icon="ion ion-logo-usd"  to="/typography" :exact="true">
+      <sidenav-router-link icon="fa-brands fa-bitcoin" to="/wallets" :exact="true">کیف های من</sidenav-router-link>
+      <sidenav-menu icon="fa-solid fa-sack-dollar"  to="/typography" :exact="true">
        <template slot="link-text">حسابداری</template>
         <sidenav-router-link class="small font-weight-semibold"  to="/deposit">واریز ریالی</sidenav-router-link>
         <sidenav-router-link class="small font-weight-semibold"  to="/wallets/1/withdraw">برداشت ریالی</sidenav-router-link>
@@ -43,39 +43,39 @@
       <!-- UI elements -->
 
       <sidenav-divider class="mb-1"/>
-            <sidenav-router-link icon="ion ion-md-swap" to="/exchange" :exact="true">اکسچینج</sidenav-router-link>
+            <sidenav-router-link icon="fa-solid fa-rotate" to="/exchange" :exact="true">اکسچینج</sidenav-router-link>
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">خرید</sidenav-header>
-      <sidenav-router-link icon="ion ion-md-cart" to="/buy-out" :exact="true"> خرید خارجی</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-cart" to="/buy" :exact="true"> خرید داخلی </sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-store" to="/buy-out" :exact="true"> خرید خارجی</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-store" to="/buy" :exact="true"> خرید داخلی </sidenav-router-link>
       
       
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">فروش</sidenav-header>
-      <sidenav-router-link icon="ion ion-md-cart" to="/sell" :exact="true"> فروش داخلی </sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-cart" to="/sell-out" :exact="true"> فروش خارجی </sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-store" to="/sell" :exact="true"> فروش داخلی </sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-store" to="/sell-out" :exact="true"> فروش خارجی </sidenav-router-link>
       
 
 
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">سوابق معاملات</sidenav-header>
-      <sidenav-router-link icon="ion ion-md-clock" to="/open-orders" :exact="true"> سفارشات باز داخلی</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-list-box" to="/history" :exact="true">تاریخچه سفارشات داخلی</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-clock" to="/open-orders-out" :exact="true">سفارشات باز خارجی</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-list-box" to="/history-out" :exact="true">تاریخچه سفارشات خارجی</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-spinner" to="/open-orders" :exact="true"> سفارشات باز داخلی</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-clock" to="/history" :exact="true">تاریخچه سفارشات داخلی</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-spinner" to="/open-orders-out" :exact="true">سفارشات باز خارجی</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-clock" to="/history-out" :exact="true">تاریخچه سفارشات خارجی</sidenav-router-link>
 
       <sidenav-divider class="mb-1"/>
 
 
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">معاملات لحظه ای</sidenav-header>
-      <sidenav-router-link icon="ion ion-md-trending-up" to="/perpetual-trade/BTCUSDT" :exact="true">بازار پرپشوال</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-trending-up" to="/margin-trade/BTCUSDT" :exact="true"> بازار مارجین</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/perpetual-trade/BTCUSDT" :exact="true">بازار پرپشوال</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/margin-trade/BTCUSDT" :exact="true"> بازار مارجین</sidenav-router-link>
       <!-- UI elements -->
 
       <sidenav-divider class="mb-1"/>
-      <sidenav-router-link icon="ion ion-md-cart" to="/buyapp" :exact="true">سفارش سایت صرافی</sidenav-router-link>
-      <sidenav-router-link icon="ion ion-md-exit" to="/logout" :exact="true"> خروج</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-bag-shopping" to="/buyapp" :exact="true">سفارش سایت صرافی</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-circle-xmark" to="/logout" :exact="true"> خروج</sidenav-router-link>
       
     </div>
   </sidenav>

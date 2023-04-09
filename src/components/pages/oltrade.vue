@@ -3,7 +3,7 @@
     <div class="col-12">
       <b-card id="p1" no-body class="mb-3 cardss" style=";height:450px;overflow:auto ; width:24% ; margin-right:1%">
           <b-input v-model="searchtext" placeholder="...جستجو" style="top:0;position:absolute;height:40px; width: 100%;margin:auto;background:transparent;border-style:none;padding:10px;border-radius:0;border-bottom:solid;text-align:right" @input="search()"></b-input>
-        <table style="top:40px;position:absolute;text-align:left; color:white;font:14px 'arial';width:100%" class="">
+        <table style="top:40px;position:absolute;text-align:left; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                                   <th scope="col" style="width:50%">بازار</th>
 
@@ -34,7 +34,7 @@
       </div>
       <b-card id="p3" no-body class="mb-3 cardss" style=";height:495px; width:24%; margin-right:1%">
           <h5 style="width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc;margin:0">درخواست های خرید</h5>
-          <table v-if="boardinfo.asks"  style="text-align:right; color:white;font:14px 'arial';" class="">
+          <table v-if="boardinfo.asks"  style="text-align:right; color:white;font:14px 'UD';" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:30%">مجموع</th>
                   <th scope="col" style="width:30%">قیمت</th>
@@ -65,53 +65,53 @@
     <div style="clear:both"></div>
     <div class="col-12 ">
       <b-card id="p4" no-body class="mb-3  cardss" style=";height:550px;color:white;margin-top:-20px ; width:24%; margin-right:1%">
-                      <h4 style="font-family:'arial';width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc">موجودی</h4>
+                      <h4 style="font-family:'UD'!important;width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc">موجودی</h4>
        <table v-if="balances.data"  >
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.leverage).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">Leverage</td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.balance.buy_type).toFixed(4)}}</td>
              <td  style="width:50%;text-align:right">{{balances.data.buy_asset_type}}-Balance </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.balance.sell_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.sell_asset_type}}-Balance </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.frozen.buy_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.buy_asset_type}}-Frozen </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.frozen.sell_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.sell_asset_type}}-Frozen </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.loan.buy_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.buy_asset_type}}-Loan </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.loan.sell_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.sell_asset_type}}-Loan </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.interest.buy_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.buy_asset_type}}-Interest </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.interest.sell_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.sell_asset_type}}-Interest </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.can_transfer.buy_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.buy_asset_type}}-can transfer </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances.data.can_transfer.sell_type).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{balances.data.sell_asset_type}}-can transfer </td>
           </tr>
-          <tr style="font-family:'arial';font-size:12px">
+          <tr style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(liquidation).toFixed(6)}}</td>
              <td style="width:50%;text-align:right">liquidation_price </td>
           </tr>
@@ -122,20 +122,20 @@
 
       <div id="p5" class="" style="float:left;height:580px;margin-top:-20px ; width:49%; margin-right:1%">
           <b-card id="p5-sub" no-body class="cardss" style="border-radius: 0!important;height:550px">
-              <h4 style="font-family:'arial';width:100%;height:40px;background:black;padding:6px;text-align:center;color:#cacadc">مرجین</h4>
-              <div style="font-family:'arial';margin-top:-10px;width:100%;height:60px;background:rgba(0,0,0,.2);padding:8px;text-align:center;color:#cacadc">
-                  <button style="float:left;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'"  class="btn btn-light nbile" @click="borrow()">Borrow</button>
-                  <button style="float:left;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'"  class="btn btn-light nbile" @click="repay()">Repay</button>
-                  <button style="float:left;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'"  class="btn btn-light nbile" @click="transfer()">Transfer</button>
-                    <p v-if="balances.data" style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font:12px 'arial'"  class="alert alert-light"> دارایی لحظه ای<br>{{livebalance.toFixed(4)}} {{balances.data.buy_asset_type}} </p>
-                    <p v-if="balances.data" style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font:12px 'arial'"  class="alert alert-light">  قیمت لیکوییدیشن <br>{{liquidation}} {{balances.data.buy_asset_type}} </p>
+              <h4 style="font-family:'UD'!important;width:100%;height:40px;background:black;padding:6px;text-align:center;color:#cacadc">مرجین</h4>
+              <div style="font-family:'UD'!important;margin-top:-10px;width:100%;height:60px;background:rgba(0,0,0,.2);padding:8px;text-align:center;color:#cacadc">
+                  <button style="float:left;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important"  class="btn btn-light nbile" @click="borrow()">Borrow</button>
+                  <button style="float:left;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important"  class="btn btn-light nbile" @click="repay()">Repay</button>
+                  <button style="float:left;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important"  class="btn btn-light nbile" @click="transfer()">Transfer</button>
+                    <p v-if="balances.data" style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font:12px 'UD'"  class="alert alert-light"> دارایی لحظه ای<br>{{livebalance.toFixed(4)}} {{balances.data.buy_asset_type}} </p>
+                    <p v-if="balances.data" style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font:12px 'UD'"  class="alert alert-light">  قیمت لیکوییدیشن <br>{{liquidation}} {{balances.data.buy_asset_type}} </p>
               </div><br>
               <div style="clear:both"></div>
-              <div style="font-family:'arial';width:100%;height:40px;background:none;padding:8px;text-align:center;color:#cacadc">
+              <div style="font-family:'UD'!important;width:100%;height:40px;background:none;padding:8px;text-align:center;color:#cacadc">
               <button class="btn btn-warning nbile" style="padding-top : 0px;padding-bottom : 0px;background:none;float:left" v-if="balances.data" disabled>  {{balances.data.leverage}}X</button>
-                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'" id="limit" @click="tabact('limit')" class="btn btn-light tabss">Limit</button>
-                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'" id="market" @click="tabact('market')" class="btn btn-light act tabss">Market</button>
-                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'" id="stop-limit" @click="tabact('stop-limit')" class="btn btn-light tabss">Stop-Limit</button>
+                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important" id="limit" @click="tabact('limit')" class="btn btn-light tabss">Limit</button>
+                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important" id="market" @click="tabact('market')" class="btn btn-light act tabss">Market</button>
+                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important" id="stop-limit" @click="tabact('stop-limit')" class="btn btn-light tabss">Stop-Limit</button>
               </div><br>
               <div style="clear:both"></div>
               <div class="tabsss market">
@@ -144,29 +144,29 @@
                 <form @submit.prevent="mbuy()">
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; background:rgba(255,255,255,.2)">{{balances.data.buy_asset_type}}</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; background:rgba(255,255,255,.2)">Price</span>
+                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; background:rgba(255,255,255,.2)">{{balances.data.buy_asset_type}}</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; background:rgba(255,255,255,.2)">Price</span>
                     </div>
                     <input readonly disabled placeholder="بهترین قیمت بازار" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right; background:rgba(255,255,255,.2)">
                   </div>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">{{balances.data.buy_asset_type}}</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">{{balances.data.buy_asset_type}}</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                     </div>
-                      <input v-if="leverage[$route.params.sym]" v-model="mb_amount" class="form-control"  :max="leverage[$route.params.sym]['smax']" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                      <input v-if="leverage[$route.params.sym]" v-model="mb_amount" class="form-control"  :max="leverage[$route.params.sym]['smax']" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                   </div>
                   <table style="width:98%;margin-left:2%">
                     <tr>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">0%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">25%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">50%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">75%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">100%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">0%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">25%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">50%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">75%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">100%</td>
                     </tr>
                   </table>
                   <b-form-slider :step="0.00000001" :ticks_tooltip="true" v-if="balances.data" :min="0.00" :max="parseFloat(balances.data.balance.buy_type)" v-model="mb_amount"></b-form-slider>
-                  <p v-if="balances.data" style=";font-family:'arial'">  {{mb_amount}}  {{balances.data.buy_asset_type}} : مبلغ کل</p>
+                  <p v-if="balances.data" style=";font-family:'UD'!important">  {{mb_amount}}  {{balances.data.buy_asset_type}} : مبلغ کل</p>
                   <br>
                   <input type="submit" value="خرید" class="btn btn-success" style="width:100%;border-radius:0">
                 </form>
@@ -181,29 +181,29 @@
                   <form @submit.prevent="msell()">
                     <div class="input-group mb-3">
                       <div class="input-group-prepend" style="direction:rtl">
-                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; background:rgba(255,255,255,.2)">USDT</span>
-                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; background:rgba(255,255,255,.2)">Price</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; background:rgba(255,255,255,.2)">USDT</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; background:rgba(255,255,255,.2)">Price</span>
                       </div>
                       <input readonly disabled placeholder="بهترین قیمت بازار" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right; background:rgba(255,255,255,.2)">
                     </div>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend" style="direction:rtl">
-                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
-                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                       </div>
-                        <input v-if="leverage[$route.params.sym]" v-model="ms_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                        <input v-if="leverage[$route.params.sym]" v-model="ms_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                     </div>
                     <table style="width:98%;margin-left:2%">
                       <tr>
-                        <td style="text-align:center; color:white ; font: 12px 'arial'">0%</td>
-                        <td style="text-align:center; color:white ; font: 12px 'arial'">25%</td>
-                        <td style="text-align:center; color:white ; font: 12px 'arial'">50%</td>
-                        <td style="text-align:center; color:white ; font: 12px 'arial'">75%</td>
-                        <td style="text-align:center; color:white ; font: 12px 'arial'">100%</td>
+                        <td style="text-align:center; color:white ; font: 12px 'UD'">0%</td>
+                        <td style="text-align:center; color:white ; font: 12px 'UD'">25%</td>
+                        <td style="text-align:center; color:white ; font: 12px 'UD'">50%</td>
+                        <td style="text-align:center; color:white ; font: 12px 'UD'">75%</td>
+                        <td style="text-align:center; color:white ; font: 12px 'UD'">100%</td>
                       </tr>
                     </table>
                     <b-form-slider :step="0.00000001" :ticks_tooltip="true" v-if="balances.data" :min="0.0000000" :max="parseFloat(balances.data.balance.sell_type)" v-model="ms_amount"></b-form-slider>
-                    <p style=";font-family:'arial'">  ~~ USDT : مبلغ کل</p>
+                    <p style=";font-family:'UD'!important">  ~~ USDT : مبلغ کل</p>
                     <br>
                     <input type="submit" value="فروش" class="btn btn-danger" style="width:100%;border-radius:0">
                   </form>
@@ -220,29 +220,29 @@
                     <form @submit.prevent="lbuy()">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend" style="direction:rtl">
-                          <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">{{balances.data.buy_asset_type}}</span>
-                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Price</span>
+                          <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">{{balances.data.buy_asset_type}}</span>
+                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Price</span>
                         </div>
-                        <input v-model="lb_price" class="form-control" @input="lb_allset" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                        <input v-model="lb_price" class="form-control" @input="lb_allset" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                       </div>
                       <div class="input-group mb-3">
                         <div class="input-group-prepend" style="direction:rtl">
-                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
-                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
+                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                         </div>
-                          <input v-if="leverage[$route.params.sym]" @input="lb_allset" v-model="lb_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                          <input v-if="leverage[$route.params.sym]" @input="lb_allset" v-model="lb_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                       </div>
                       <table style="width:98%;margin-left:2%">
                     <tr>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">0%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">25%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">50%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">75%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">100%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">0%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">25%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">50%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">75%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">100%</td>
                     </tr>
                   </table>
                   <b-form-slider :step="0.00000001" :ticks_tooltip="true" v-if="balances.data" :min="0.00" @slide-stop="lbslide" :max="parseFloat(balances.data.balance.buy_type)" v-model="lb_all"></b-form-slider>
-                      <p v-if="balances.data" style=";font-family:'arial'">  {{lb_all}}  {{balances.data.buy_asset_type}} : مبلغ کل</p>
+                      <p v-if="balances.data" style=";font-family:'UD'!important">  {{lb_all}}  {{balances.data.buy_asset_type}} : مبلغ کل</p>
                       <br>
                       <input type="submit" value="خرید" class="btn btn-success" style="width:100%;border-radius:0">
                     </form>
@@ -252,30 +252,30 @@
                     <form @submit.prevent="lsell()">
                       <div class="input-group mb-3">
                       <div class="input-group-prepend" style="direction:rtl">
-                          <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">{{balances.data.buy_asset_type}}</span>
-                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Price</span>
+                          <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">{{balances.data.buy_asset_type}}</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Price</span>
                       </div>
-                      <input v-model="ls_price" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'arial' ">
+                      <input v-model="ls_price" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'UD'!important ">
                     </div>
                 
                       <div class="input-group mb-3">
                         <div class="input-group-prepend" style="direction:rtl">
-                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
-                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
+                          <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                         </div>
-                        <input v-if="leverage[$route.params.sym]" v-model="ls_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                        <input v-if="leverage[$route.params.sym]" v-model="ls_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                       </div>
                       <table style="width:98%;margin-left:2%">
                     <tr>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">0%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">25%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">50%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">75%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">100%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">0%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">25%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">50%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">75%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">100%</td>
                     </tr>
                   </table>
                   <b-form-slider :step="0.00000001" :ticks_tooltip="true" v-if="balances.data" :min="0.000000000" :max="parseFloat(balances.data.balance.sell_type)" v-model="ls_amount"></b-form-slider>
-                      <p v-if="balances.data" style=";font-family:'arial'"> {{ls_amount * ls_price}} {{balances.data.buy_asset_type}} : مبلغ کل</p>
+                      <p v-if="balances.data" style=";font-family:'UD'!important"> {{ls_amount * ls_price}} {{balances.data.buy_asset_type}} : مبلغ کل</p>
                       <br>
                       <input type="submit" value="فروش" class="btn btn-danger" style="width:100%;border-radius:0">
                     </form>
@@ -293,20 +293,20 @@
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">{{balances.data.buy_asset_type}}</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Stop</span>
+                    <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">{{balances.data.buy_asset_type}}</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Stop</span>
                   </div>
-                  <input v-model="lsb_stop" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                  <input v-model="lsb_stop" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
 
 
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">{{balances.data.buy_asset_type}}</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Limit</span>  
+                    <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">{{balances.data.buy_asset_type}}</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Limit</span>  
                   </div>
-                    <input v-model="lsb_limit" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                    <input v-model="lsb_limit" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
 
 
@@ -314,25 +314,25 @@
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                   </div>
-                    <input v-if="leverage[$route.params.sym]" v-model="lsb_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                    <input v-if="leverage[$route.params.sym]" v-model="lsb_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
                 <table style="width:98%;margin-left:2%">
                     <tr>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">0%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">25%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">50%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">75%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">100%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">0%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">25%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">50%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">75%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">100%</td>
                     </tr>
                   </table>
                   <b-form-slider :step="0.00000001" :ticks_tooltip="true" v-if="balances.data" @silde-stop="lsbslide" :min="0.00" :max="parseFloat(balances.data.balance.buy_type)" v-model="lsb_all"></b-form-slider>
 
 
 
-                <p v-if="balances.data" style=";font-family:'arial'">  {{lsb_all}}  {{balances.data.buy_asset_type}} : مبلغ کل</p>
+                <p v-if="balances.data" style=";font-family:'UD'!important">  {{lsb_all}}  {{balances.data.buy_asset_type}} : مبلغ کل</p>
                 <br>
                 <input type="submit" value="خرید" class="btn btn-success" style="width:100%;border-radius:0">
               </form>
@@ -345,19 +345,19 @@
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">{{balances.data.buy_asset_type}}</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Stop</span>
+                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">{{balances.data.buy_asset_type}}</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Stop</span>
                     </div>
-                    <input v-model="lss_stop" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'arial' ">
+                    <input v-model="lss_stop" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'UD'!important ">
                   </div>
 
 
                                 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">{{balances.data.buy_asset_type}}</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Limit</span>  </div>
-                    <input v-model="lss_limit" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                      <span v-if="balances.data" class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">{{balances.data.buy_asset_type}}</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Limit</span>  </div>
+                    <input v-model="lss_limit" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                   </div>
 
 
@@ -365,24 +365,24 @@
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                              <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  </div>
-                    <input v-if="leverage[$route.params.sym]" v-model="lss_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                              <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" v-if="balances.data">{{balances.data.sell_asset_type}}</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  </div>
+                    <input v-if="leverage[$route.params.sym]" v-model="lss_amount"  :max="parseFloat(leverage[$route.params.sym]['bmax'])" class="form-control" step="any" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                   </div>
                   <table style="width:98%;margin-left:2%">
                     <tr>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">0%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">25%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">50%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">75%</td>
-                      <td style="text-align:center; color:white ; font: 12px 'arial'">100%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">0%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">25%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">50%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">75%</td>
+                      <td style="text-align:center; color:white ; font: 12px 'UD'">100%</td>
                     </tr>
                   </table>
                   <b-form-slider :step="0.00000001" :ticks_tooltip="true" v-if="balances.data" :min="0.000000000" :max="parseFloat(balances.data.balance.sell_type)" v-model="lss_amount"></b-form-slider>
 
 
 
-                  <p v-if="balances.data" style=";font-family:'arial'"> {{lss_amount * lss_limit}} {{balances.data.buy_asset_type}} : مبلغ کل</p>
+                  <p v-if="balances.data" style=";font-family:'UD'!important"> {{lss_amount * lss_limit}} {{balances.data.buy_asset_type}} : مبلغ کل</p>
                   <br>
                   <input type="submit" value="فروش" class="btn btn-danger" style="width:100%;border-radius:0">
                </form>
@@ -393,7 +393,7 @@
       <b-card id="p6" no-body class="mb-3 cardss" style=";height:570px;margin-top:-40px ; width:24%; margin-right:1%">
         <h1 style="width:100%;height:60px;background:rgba(0,0,0,0.4);padding:8px;text-align:left;color:#cacadc;margin:0;color:green">{{boardinfo.last}} <br></h1>
           <h5 style="width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc;margin:0">درخواست های فروش</h5>
-          <table v-if="boardinfo.bids"  style="text-align:right; color:white;font:14px 'arial';" class="">
+          <table v-if="boardinfo.bids"  style="text-align:right; color:white;font:14px 'UD';" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:30%">مجموع</th>
                   <th scope="col" style="width:30%">قیمت</th>
@@ -401,7 +401,7 @@
               </tr>
           <tr v-for="(item, idx) in boardinfo.asks.slice(0,10)" v-bind:key="idx">
             <td style="width:30%;">{{(item[1] * item[0]).toFixed(2)}}</td>
-             <td @click="fillneg(item[0])" style="width:30%;color:red;font-family:'arial';cursor:pointer">{{item[0]}}</td>
+             <td @click="fillneg(item[0])" style="width:30%;color:red;font-family:'UD'!important;cursor:pointer">{{item[0]}}</td>
              <td style="width:30%;">{{item[1]}}</td>
           </tr>
           </table>
@@ -418,7 +418,7 @@
       <b-tabs no-body class="col-12 cardss nbile" style="height:auto;margin-bottom:50px">
         <b-tab title="سفارشات باز" style="width:100%">
         <h5 style="width:100%;height:4px;background:black;padding:0px;text-align:center;color:#cacadc;margin:0"></h5>
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:12% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:12% ; text-align:center">قرارداد</th>
@@ -460,7 +460,7 @@
       </b-tab>
       <b-tab title="(استاپ) سفارشات باز" style="height:auto;margin-bottom:50px;width:100%">
         <h5 style="width:100%;height:4px;background:black;padding:0px;text-align:center;color:#cacadc;margin:0"></h5>
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:12% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:12% ; text-align:center">قرارداد</th>
@@ -505,7 +505,7 @@
 
           <b-tab title="سابقه سفارشات" class="cardss">
         <div style="width:100%;height:1px;background:black;padding:2px;text-align:center;color:#cacadc;margin:0"></div>          
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:14% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:14% ; text-align:center">مقدار</th>
@@ -540,7 +540,7 @@
           </b-tab>
            <b-tab title="(استاپ) سابقه سفارشات" class="cardss">
         <div style="width:100%;height:1px;background:black;padding:2px;text-align:center;color:#cacadc;margin:0"></div>          
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:14% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:14% ; text-align:center">مقدار</th>
@@ -1278,7 +1278,7 @@ export default {
       }, 500);
       this.$swal.fire({
         title: 'Transfer',
-        html:'<select id="aaaa" ' +'" class="form-control">' + '<option value="" disabled selected>سمت انتقال</option>' + `<option value="1">از asset</option>` + `<option value="2">به asset</option>` + '</select>' + '<br>' + '<select id="bbbb" class="form-control">'+ '<option value="" disabled selected>نوع کوین</option>' + `<option value="${this.balances.data.buy_asset_type}">${this.balances.data.buy_asset_type}</option>` + `<option value="${this.balances.data.sell_asset_type}">${this.balances.data.sell_asset_type}</option>` + '</select>' + '<br>'+ 'موجودی:'+ '<a class="btn btn-dark" style="padding: 0px 30px;margin:2px ; font-family: arial " href="#" id="transbal"></a>' +'<input id="transamount" placeholder="مبلغ" class="form-control"></input>',
+        html:'<select id="aaaa" ' +'" class="form-control">' + '<option value="" disabled selected>سمت انتقال</option>' + `<option value="1">از asset</option>` + `<option value="2">به asset</option>` + '</select>' + '<br>' + '<select id="bbbb" class="form-control">'+ '<option value="" disabled selected>نوع کوین</option>' + `<option value="${this.balances.data.buy_asset_type}">${this.balances.data.buy_asset_type}</option>` + `<option value="${this.balances.data.sell_asset_type}">${this.balances.data.sell_asset_type}</option>` + '</select>' + '<br>'+ 'موجودی:'+ '<a class="btn btn-dark" style="padding: 0px 30px;margin:2px ; font-family: UD " href="#" id="transbal"></a>' +'<input id="transamount" placeholder="مبلغ" class="form-control"></input>',
         showCancelButton: true,
         confirmButtonText: 'تایید',
         cancelButtonText: 'لغو',

@@ -17,10 +17,10 @@
           <b-card-body>
 
             <div class="row no-gutters align-items-center">
-              <div class="col-3 cent" style="font: 12px 'arial'">{{section.get_user}}</div>
-              <div class="col-2 cent" style="font: 12px 'arial'">{{section.amount}}</div>
+              <div class="col-3 cent" style="font: 12px 'UD'">{{section.get_user}}</div>
+              <div class="col-2 cent" style="font: 12px 'UD'">{{section.amount}}</div>
               <div class="col-2 cent" style="font: 12px 'Yekan'">{{section.get_age}}</div>
-              <div class="col-4 cent" style="font: 12px 'arial'">
+              <div class="col-4 cent" style="font: 12px 'UD'">
                 شماره شبا  <br>
                 {{section.get_sheba}} <br>
                 شماره حساب  <br>
@@ -47,11 +47,11 @@
                   <h6  style=" height:50px ">شماره حساب </h6>
                 </div>
               <div style="width:55% ;float:left">
-                <h4  style=" height:50px ; text-align:left ; font: 12px 'arial'">{{transaction.get_user}}</h4>
-                <h4  style=" height:50px ; text-align:left ; font: 12px 'arial'">{{transaction.amount}}</h4>
+                <h4  style=" height:50px ; text-align:left ; font: 12px 'UD'">{{transaction.get_user}}</h4>
+                <h4  style=" height:50px ; text-align:left ; font: 12px 'UD'">{{transaction.amount}}</h4>
                 <h4  style=" height:50px ; text-align:left ; font: 12px 'Yekan'">{{transaction.get_age}}</h4>
-                <h4  style=" height:50px ; text-align:left ; font: 12px 'arial'">{{transaction.get_sheba}}</h4>
-                <h5  style=" height:50px ; text-align:left ; font: 12px 'arial'">{{transaction.get_number}}</h5><br>
+                <h4  style=" height:50px ; text-align:left ; font: 12px 'UD'">{{transaction.get_sheba}}</h4>
+                <h5  style=" height:50px ; text-align:left ; font: 12px 'UD'">{{transaction.get_number}}</h5><br>
               </div>
               <div class="col-12 cent"><button class="btnfont btn btn-danger" style="width:100%;float:left" @click="reject(section.id)">رد درخواست</button><button class="btnfont btn btn-success" style="width:100%;float:left" @click="accept(section.id)"> تایید درخواست</button></div>
                   </b-card><br>

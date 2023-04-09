@@ -3,7 +3,7 @@
 
 
       <b-card no-body class="col-12" style="text-align:center">
-        <b-card-header style="font-family:'arial'">
+        <b-card-header style="font-family:'UD'!important">
           <h3 class="col-12 cent">{{wallets.brand}}</h3>
         </b-card-header>
           <b-card-body class="py-3 wallets">
@@ -20,14 +20,14 @@
             <h2 class="row no-gutters align-items-center">برداشت</h2>
           </b-card-header>
         <div v-if="wallets.balance"><br><br>
-        <select class="form-control" v-model="chain" @change="getfee()" style="font-family:'arial'">
-          <option class="op" v-for="(item,name) in wallets.address" v-bind:key="name" :value="name" style="font-family:'arial'">{{name}}</option>
+        <select class="form-control" v-model="chain" @change="getfee()" style="font-family:'UD'!important">
+          <option class="op" v-for="(item,name) in wallets.address" v-bind:key="name" :value="name" style="font-family:'UD'!important">{{name}}</option>
         </select><br>
           <h6> مبلغ درخواستی <a type="button" v-if="!wallets.balance > 0" @click="amountset()" class="btn btn-dark" style="background:white;padding:3px;color:#888s">  موجودی قابل انتقال : 0</a>  <a v-if="wallets.balance -( parseFloat(fee) + (parseFloat(fee)/2)) > 0" @click="amountset()" class="btn btn-dark" style="background:white;padding:3px;color:#888s">  موجودی قابل انتقال : {{wallets.balance}}</a></h6>
           <b-input class="" v-model="amountout"></b-input><br>
           <h6> آدرس ولت </h6>
           <b-input class="" v-model="walletout"></b-input><br>
-          مبلغ دریافتی : <a  v-if="amountout - parseFloat(fee) < 0" @click="amountset()"  style="background:white;padding:3px;color:#888s;font-family:'arial'">     0</a>  <a style="background:white;padding:3px;color:#888s;font-family:'arial'" v-if="amountout - parseFloat(fee)  > 0" @click="amountset()"  >     {{amountout - parseFloat(fee)}}</a><br><br>
+          مبلغ دریافتی : <a  v-if="amountout - parseFloat(fee) < 0" @click="amountset()"  style="background:white;padding:3px;color:#888s;font-family:'UD'!important">     0</a>  <a style="background:white;padding:3px;color:#888s;font-family:'UD'!important" v-if="amountout - parseFloat(fee)  > 0" @click="amountset()"  >     {{amountout - parseFloat(fee)}}</a><br><br>
           <button id="withdraw" class="btn btn-dark">ثبت درخواست</button>
         </div>
         </form>
@@ -41,8 +41,8 @@
 
           <form @submit.prevent="submitdep" label="" style="text-align:center">
             <img v-if="address" id="qr" :src=" `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${address}`"><br><br><br>
-            <select class="form-control" v-model="chain2" @change="getaddress()" style="font-family:'arial'">
-              <option class="op" v-for="(item,name) in wallets.address" v-bind:key="name" :value="name" style="font-family:'arial'">{{name}}</option>
+            <select class="form-control" v-model="chain2" @change="getaddress()" style="font-family:'UD'!important">
+              <option class="op" v-for="(item,name) in wallets.address" v-bind:key="name" :value="name" style="font-family:'UD'!important">{{name}}</option>
             </select><br>
             <label for="address" id="addresslable">آدرس</label>
             <b-input v-model="address" id="address" name="address" readonly></b-input>
@@ -331,6 +331,6 @@ export default {
   text-align:center
 }
 input{
-  font-family: 'arial';
+  font-family: 'UD';
 }
 </style>

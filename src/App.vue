@@ -125,7 +125,7 @@ a , h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,span, p, input, button{
     font-weight:bold
   }
 input{
-  font-family: 'arial';
+  font-family: 'UD';
 }
 .transm .card-body {
   padding:5px;

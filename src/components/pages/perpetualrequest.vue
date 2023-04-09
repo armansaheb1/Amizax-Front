@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card v-if="verified" no-body class="col-12">
-        <b-card-header class="row no-gutters align-items-center cent" style="font-family:'arial'">
+        <b-card-header class="row no-gutters align-items-center cent" style="font-family:'UD'!important">
           <h2>   حساب پرپشوال شما تایید شده است یا درخواست ثبت کرده اید</h2>
         </b-card-header>
 
@@ -11,7 +11,7 @@
       </b-card>
 
       <b-card v-if="!verified" no-body class="col-12">
-        <b-card-header class="row no-gutters align-items-center cent" style="font-family:'arial'">
+        <b-card-header class="row no-gutters align-items-center cent" style="font-family:'UD'!important">
           <h2>ارسال درخواست تایید حساب پرپشوال</h2>
         </b-card-header>
 
@@ -170,6 +170,6 @@ export default {
   text-align:center
 }
 input{
-  font-family: 'arial';
+  font-family: 'UD';
 }
 </style>

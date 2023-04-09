@@ -22,8 +22,8 @@
               <div v-if="item.get_user" class="col-4 cent">{{item.get_user}}</div>
               <div v-if="!item.get_user" class="col-4 cent">{{item.email}}</div>
               <div class="col-4 cent">{{item.uri}}</div>
-              <div v-if="item.get_seen" class="col-4 cent"> <a   style="margin:-10px;width:22px;height:22px;border-radius:50%; background:red; position:absolute ;text-align:center; color:white ; font-family:'arial'">{{item.get_seen}}</a> </div>
-              <div v-if="!item.get_seen" class="col-4 cent"> <a   style="margin:-10px;width:22px;height:22px;border-radius:50%; background:green; position:absolute ;text-align:center; color:white ; font-family:'arial'">{{item.get_seen}}</a> </div>
+              <div v-if="item.get_seen" class="col-4 cent"> <a   style="margin:-10px;width:22px;height:22px;border-radius:50%; background:red; position:absolute ;text-align:center; color:white ; font-family:'UD'!important">{{item.get_seen}}</a> </div>
+              <div v-if="!item.get_seen" class="col-4 cent"> <a   style="margin:-10px;width:22px;height:22px;border-radius:50%; background:green; position:absolute ;text-align:center; color:white ; font-family:'UD'!important">{{item.get_seen}}</a> </div>
             </router-link>
           </b-card-body>
 

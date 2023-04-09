@@ -55,7 +55,7 @@
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-2 cent">{{section.get_first}}</div>
               <div class="col-2 cent">{{section.get_last}}</div>
-              <div class="col-3 cent" style="font:12px 'arial'">IR{{section.shebac}} <hr style="margin:0"> {{section.bankc}}</div>
+              <div class="col-3 cent" style="font:12px 'UD'">IR{{section.shebac}} <hr style="margin:0"> {{section.bankc}}</div>
               <div class="col-3 cent"><button class="btnfont btn btn-danger" @click="areject(section.get_user , section.bankc , section.id, section.shebac)">رد درخواست</button><button class="btnfont btn btn-success" @click="aaccept(section.get_user , section.bankc, section.id, section.shebac)"> تایید درخواست</button></div>
             </div>
 

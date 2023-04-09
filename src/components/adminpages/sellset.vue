@@ -20,8 +20,8 @@
             <div class="row no-gutters align-items-center">
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-2 cent">{{section.currency}}</div>
-              <div class="col-2 cent" style="font:12px 'arial'">{{section.ramount}}</div>
-              <div class="col-2 cent" style="font:12px 'arial'">{{section.camount}}</div>
+              <div class="col-2 cent" style="font:12px 'UD'">{{section.ramount}}</div>
+              <div class="col-2 cent" style="font:12px 'UD'">{{section.camount}}</div>
               <div class="col-2 cent">{{section.get_age}}</div>
               <div class="col-2 cent"><form @submit="accept(section.id)"><input required class="form-control" min="100000" :id="section.id" style="width:100%; float:left" type="number" placeholder=" قیمت تمام شده"><button type="submit" class="btn btn-success" style="width:100%; float:left">تایید</button></form></div>
             </div>

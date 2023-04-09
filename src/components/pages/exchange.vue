@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card v-if="sym && sym2  && price && price2"> 
-      <h3 v-if="sym && sym2  && price && price2" style="float:right; color:#888" > قیمت نسبی ارز  ها: <a style="font:20px 'arial'">{{this.price.buy  / this.price2.buy }}</a></h3>
+      <h3 v-if="sym && sym2  && price && price2" style="float:right; color:#888" > قیمت نسبی ارز  ها: <a style="font:20px 'UD'">{{this.price.buy  / this.price2.buy }}</a></h3>
       </b-card>
         <b-card-header class="row no-gutters align-items-center">تبدیل</b-card-header>
 
@@ -17,9 +17,9 @@
         </div>
 
          <input @click="listshow" @input="search()" type="text" class="form-control" placeholder="search ..." v-model="searchtxt" style="border-radius: 5px 5px 0 0; border-color:lightgrey!important">
-          <div class="list" style="height:150px; overflow-x:hidden ;overflow-y:scroll ; border: solid lightgrey .2px ; border-radius: 0 0 5px 5px" id="my-list-id">
-            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'"   type="button"  style="height:50px; width: 100% ; background: none ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 15px 'UD'!important;padding-left:10%"  @click="buttonchange('USDT')"  selected >USDT&emsp;<template style="margin:9px"><img style="width:32px;height:32px" :src="`/icons/color/usdt.svg`" :onerror="`javascript:this.src='/icons/color/usdt.png';`"  alt=""></template>   </button>
-            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'" v-for="(value , key) in leverage" v-bind:key="'n' + key" :id="key"  type="button"  style="height:50px; width: 100% ; background: none ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 15px 'UD'!important;padding-left:10%"  @click="buttonchange(key.replace('USDT', ''))"  selected >{{key.replace('USDT', '')}}&emsp;<template style="margin:9px"><img style="width:32px;height:32px" :src="`/icons/color/${key.replace('USDT', '').toLowerCase()}.svg`" :onerror="`javascript:this.src=https://www.freeiconspng.com/uploads/no-image-icon-4.png`"  alt=""></template>   </button>
+          <div class="list" style="height:165px; overflow-x:hidden ;overflow-y:scroll ; border: solid lightgrey .2px ; border-radius: 0 0 5px 5px; font-size: 13px!important" id="my-list-id">
+            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'"   type="button"  style="height:55px; width: 100% ; background: none ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 13px 'UD'!important;padding-left:10%"  @click="buttonchange('USDT')"  selected ><template style="margin:9px; margin-bottom: 5px"><img style="width:32px;height:32px; margin-bottom: 5px" :src="`/icons/color/usdt.svg`" :onerror="`javascript:this.src='/icons/color/usdt.png';`"  alt=""></template><br>USDT   </button>
+            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'" v-for="(value , key) in leverage" v-bind:key="'n' + key" :id="key"  type="button"  style="height:55px; width: 100% ; background: none ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 13px 'UD'!important;padding-left:10%"  @click="buttonchange(key.replace('USDT', ''))"  selected ><template style="margin:9px; margin-bottom: 5px"><img style="width:32px;height:32px; margin-bottom: 5px" :src="`/icons/color/${key.replace('USDT', '').toLowerCase()}.svg`" :onerror="`javascript:this.src='https://www.amizax.com/img/logo.png'`" alt=""></template><br>{{key.replace('USDT', '')}}   </button>
           </div><br><br>
 
           <br><h4 style="text-align:center; width:100% ; clear:both">به</h4><br>
@@ -30,13 +30,13 @@
           
 
           <input @click="listshow2" @input="search2()" type="text" class="form-control" placeholder="search ..." v-model="searchtxt2" style="border-radius: 5px 5px 0 0; border-color:lightgrey!important">
-          <div class="listtwo" style="height:150px; overflow-x:hidden ;overflow-y:scroll ; border: solid lightgrey .2px ; border-radius: 0 0 5px 5px" id="my-list-id">
-            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'"   type="button"  style="height:50px; width: 100% ; background: rgba(0,0,0,0) ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 15px 'arial';padding-left:10%"  @click="buttonchange2('USDT')"  selected >USDT&emsp;<template style="margin:9px"><img style="width:32px;height:32px" :src="`/icons/color/usdt.svg`" :onerror="`javascript:this.src='/icons/color/usdt.png';`"  alt=""></template>   </button>
-            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'" v-for="(value , key) in leverage2" v-bind:key="'n' + key + 'two'" :id="key + 'two'"  type="button"  style="height:50px; width: 100% ; background: rgba(0,0,0,0) ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 15px 'arial';padding-left:10%"  @click="buttonchange2(key.replace('USDT', ''))"  selected >{{key.replace('USDT', '')}}&emsp;<template style="margin:9px"><img style="width:32px;height:32px" :src="`/icons/color/${key.replace('USDT', '').toLowerCase()}.svg`" :onerror="`javascript:this.src=https://www.freeiconspng.com/uploads/no-image-icon-4.png`"  alt=""></template>   </button>
-            <h2 v-if="!leverage" style="font-family:'arial'; text-align:center">موردی یافت نشد</h2>
+          <div class="listtwo" style="height:165px; overflow-x:hidden ;overflow-y:scroll ; border: solid lightgrey .2px ; border-radius: 0 0 5px 5px; font-size: 13px!important" id="my-list-id">
+            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'"   type="button"  style="height:55px; width: 100% ; background: rgba(0,0,0,0) ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 15px 'UD';padding-left:10%"  @click="buttonchange2('USDT')"  selected ><template style="margin:9px; margin-bottom: 5px"><img style="width:32px;height:32px; margin-bottom: 5px" :src="`/icons/color/usdt.svg`" :onerror="`javascript:this.src='/icons/color/usdt.png';`"  alt=""></template><br>USDT   </button>
+            <button class=" curbtn" onMouseOver="this.style.background='rgba(150, 150, 150, 0.4)'" onMouseOut="this.style.background='rgba(0,0,0,0)'" v-for="(value , key) in leverage2" v-bind:key="'n' + key + 'two'" :id="key + 'two'"  type="button"  style="height:55px; width: 100% ; background: rgba(0,0,0,0) ;border-style: none; border-bottom: solid .2px lightgrey ;border-shadow:none margin:0 ; font: 15px 'UD';padding-left:10%"  @click="buttonchange2(key.replace('USDT', ''))"  selected ><template style="margin:9px; margin-bottom: 1px"><img style="width:32px;height:32px; margin-bottom: 5px" :src="`/icons/color/${key.replace('USDT', '').toLowerCase()}.svg`" :onerror="`javascript:this.src='https://www.amizax.com/img/logo.png'`" alt=""></template><br>{{key.replace('USDT', '')}}   </button>
+            <h2 v-if="!leverage" style="font-family:'UD'!important; text-align:center">موردی یافت نشد</h2>
           </div><br><br>
 
-          <h1 v-if="sym && sym2" style="text-align:center; font-family:'arial'">{{sym}} - {{sym2}}</h1>
+          <h1 v-if="sym && sym2" style="text-align:center; font-family:'UD'!important">{{sym}} - {{sym2}}</h1>
 
 
 
@@ -44,7 +44,7 @@
         <b-form-group label="">
        
            <b-card>
-           <h5 style="float:right; color:#888" v-if="price">موجودی : <a @click="balanceset()" class="btn btn-dark" style="font:12px 'arial'; padding:5px 20px">{{rial}}</a>  {{sym}} </h5><br>
+           <h5 style="float:right; color:#888" v-if="price">موجودی : <a @click="balanceset()" class="btn btn-dark" style="font:12px 'UD'; padding:5px 20px">{{rial}}</a>  {{sym}} </h5><br>
             <div class="input-group mb-3" style="direction:ltr ; margin:0">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">|{{sym}}|</span>
@@ -53,11 +53,11 @@
             </div>
                 <table style="width:98%">
                 <tr>
-                  <td style="text-align:center; color:#888 ; font: 12px 'arial'">0%</td>
-                  <td style="text-align:center; color:#888 ; font: 12px 'arial'">25%</td>
-                  <td style="text-align:center; color:#888 ; font: 12px 'arial'">50%</td>
-                  <td style="text-align:center; color:#888 ; font: 12px 'arial'">75%</td>
-                  <td style="text-align:center; color:#888 ; font: 12px 'arial'">100%</td>
+                  <td style="text-align:center; color:#888 ; font: 12px 'UD'">0%</td>
+                  <td style="text-align:center; color:#888 ; font: 12px 'UD'">25%</td>
+                  <td style="text-align:center; color:#888 ; font: 12px 'UD'">50%</td>
+                  <td style="text-align:center; color:#888 ; font: 12px 'UD'">75%</td>
+                  <td style="text-align:center; color:#888 ; font: 12px 'UD'">100%</td>
                 </tr>
               </table>
                 <b-form-slider step="0.000001" :ticks_tooltip="true" v-if="rial | rial === 0" :min="0.0000000" :max="rial" v-model="amount"></b-form-slider><br>
@@ -75,7 +75,7 @@
               </b-card>
 
         </b-form-group>
-        <h5 style="float:right; color:#888" v-if="price">دریافتی : <a  class="btn btn-dark" style="font:12px 'arial'; padding:5px 20px">{{getting}}</a></h5><br><br>
+        <h5 style="float:right; color:#888" v-if="price">دریافتی : <a  class="btn btn-dark" style="font:12px 'UD'; padding:5px 20px">{{getting}}</a></h5><br><br>
         <b-btn @click="submit()" id="submit" variant="dark">درخواست تبدیل</b-btn>
       </fieldset>
       </b-card><br><br>

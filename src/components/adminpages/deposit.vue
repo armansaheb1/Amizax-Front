@@ -20,8 +20,8 @@
             <div class="row no-gutters align-items-center">
               <div class="col-2 cent">{{section.get_user}}</div>
               <div class="col-2 cent">{{section.currency}}</div>
-              <div class="col-2 cent" style="font:12px 'arial'">{{section.amount}}</div>
-              <div class="col-2 cent" style="font:12px 'arial'">{{section.hash}}</div>
+              <div class="col-2 cent" style="font:12px 'UD'">{{section.amount}}</div>
+              <div class="col-2 cent" style="font:12px 'UD'">{{section.hash}}</div>
               <div class="col-2 cent">{{section.get_age}}</div>
               <div class="col-2 cent"><button @click="accept(section.id)" class="btn btn-success" style="width:100%; float:left">تایید</button><button @click="reject(section.id)" class="btn btn-danger " style="width:100%; float:left">رد</button></div>
             </div>

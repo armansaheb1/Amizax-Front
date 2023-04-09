@@ -207,10 +207,10 @@
           </thead>
         <tbody>
           <tr v-for="(section) in wallets2" v-bind:key="section.id">
-                  <td v-if="section.balance.available " style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
+                  <td v-if="section.balance.available " style="width:15%;font-wieght:bold;font-family:'UD'!important;font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
                   {{section.brand}}
                   </router-link></td>
-                  <td v-if="section.balance.available" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.available">0</a> 
+                  <td v-if="section.balance.available" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.available">0</a> 
                   {{section.balance.available}}<br>
                   <div v-if="!(section.brand.includes('USD'))">
                   <a v-if="prices[section.brand + 'USDT']">{{(section.balance.available * prices[section.brand + 'USDT'].last).toFixed(2)}} USD</a><br>
@@ -221,21 +221,21 @@
                   <a >{{(section.balance.available * rialprice).toFixed(0)}} ریال</a><br>
                   </div>
                   </router-link></td>
-                  <td v-if="section.balance.available " style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.frozen">0</a> {{section.balance.frozen}}</router-link></td>
+                  <td v-if="section.balance.available " style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.frozen">0</a> {{section.balance.frozen}}</router-link></td>
           </tr>
           <tr v-for="(section) in wallets2" v-bind:key="section.name">
-                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && !section.balance.available" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
+                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && !section.balance.available" style="width:15%;font-wieght:bold;font-family:'UD'!important;font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
                   {{section.brand}}
                   </router-link></td>
-                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && !section.balance.available" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.available">0</a> {{section.balance.available}}</router-link></td>
-                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && !section.balance.available" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.frozen">0</a> {{section.balance.frozen}}</router-link></td>
+                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && !section.balance.available" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.available">0</a> {{section.balance.available}}</router-link></td>
+                  <td v-if="section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX' && !section.balance.available" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.frozen">0</a> {{section.balance.frozen}}</router-link></td>
           </tr>
           <tr v-for="(section) in wallets2" v-bind:key="section.id">
-                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && !section.balance.available" style="width:15%;font-wieght:bold;font-family:'arial';font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
+                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && !section.balance.available" style="width:15%;font-wieght:bold;font-family:'UD'!important;font-size:20px"><router-link :to="`#`" class="text-big font-weight-semibold" >
                   {{section.brand}}
                   </router-link></td>
-                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && !section.balance.available" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.available">0</a> {{section.balance.available}}</router-link></td>
-                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && !section.balance.available" style="padding:20px;font-family:'arial';font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.frozen">0</a> {{section.balance.frozen}}</router-link></td>
+                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && !section.balance.available" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.available">0</a> {{section.balance.available}}</router-link></td>
+                  <td v-if="!(section.brand == 'USDT' |section.brand == 'BTC' |section.brand == 'ETH' |section.brand == 'TRX') && !section.balance.available" style="padding:20px;font-family:'UD'!important;font-size:14px"> <router-link :to="`#`"><a v-if="!section.balance.frozen">0</a> {{section.balance.frozen}}</router-link></td>
 
           </tr>
         </tbody>

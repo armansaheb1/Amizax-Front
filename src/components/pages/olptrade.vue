@@ -8,7 +8,7 @@
     <div class="col-12">
       <b-card no-body class="mb-3 col-3 cardss" style=";height:450px;overflow:auto">
           <b-input v-model="searchtext" placeholder="...جستجو" style="top:0;position:absolute;height:40px; width: 100%;margin:auto;background:transparent;border-style:none;padding:10px;border-radius:0;border-bottom:solid;text-align:right" @input="search()"></b-input>
-        <table style="top:40px;position:absolute;text-align:right; color:white;font:14px 'arial';width:100%" class="">
+        <table style="top:40px;position:absolute;text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:50%">قیمت</th>
                   <th scope="col" style="width:50%">بازار</th>
@@ -38,7 +38,7 @@
       </div>
       <b-card no-body class="mb-3 col-3 cardss" style=";height:430px">
           <h5 style="width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc;margin:0">درخواست های خرید</h5>
-          <table v-if="boardinfo.asks"  style="text-align:right; color:white;font:14px 'arial';" class="">
+          <table v-if="boardinfo.asks"  style="text-align:right; color:white;font:14px 'UD';" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:30%">مجموع</th>
                   <th scope="col" style="width:30%">قیمت</th>
@@ -63,9 +63,9 @@
 
     <div class="col-12 ">
       <b-card no-body class="mb-3 col-3 cardss" style=";height:470px;color:white">
-                      <h4 style="font-family:'arial';width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc">موجودی</h4>
+                      <h4 style="font-family:'UD'!important;width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc">موجودی</h4>
        <table v-if="balances"  >
-          <tr v-for="(value, name) in balances" v-bind:key="name" style="font-family:'arial';font-size:12px">
+          <tr v-for="(value, name) in balances" v-bind:key="name" style="font-family:'UD'!important;font-size:12px">
              <td style="width:50%;text-align:left"> {{parseFloat(balances[name]).toFixed(4)}}</td>
              <td style="width:50%;text-align:right">{{name}}</td>
           </tr>
@@ -73,14 +73,14 @@
       </b-card>
       <div class="col-6 " style="float:left;height:500px">
           <b-card no-body class="cardss" style="border-radius: 0!important;height:470px">
-              <h4 style="font-family:'arial';width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc">پرپچوال</h4>
-              <div style="font-family:'arial';width:100%;height:40px;background:none;padding:8px;text-align:center;color:#cacadc">
+              <h4 style="font-family:'UD'!important;width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc">پرپچوال</h4>
+              <div style="font-family:'UD'!important;width:100%;height:40px;background:none;padding:8px;text-align:center;color:#cacadc">
               <select v-model="lev" @change="adjustleverage()" name="" id="" class="form-control" style="width:15%; float:left">
                 <option v-for="item in marketinfo.leverages" v-bind:key="item" :value="item">{{item}}X</option>
               </select>
-                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'" id="limit" @click="tabact('limit')" class="btn btn-light tabss">Limit</button>
-                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'" id="market" @click="tabact('market')" class="btn btn-light act tabss">Market</button>
-                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'arial'" id="stop-limit" @click="tabact('stop-limit')" class="btn btn-light tabss">Stop-Limit</button>
+                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important" id="limit" @click="tabact('limit')" class="btn btn-light tabss">Limit</button>
+                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important" id="market" @click="tabact('market')" class="btn btn-light act tabss">Market</button>
+                  <button style="float:right;background:none;border-color:grey;margin:5px;border-radius:3px;padding:3px;padding-left:15px;padding-right:15px;font-family:'UD'!important" id="stop-limit" @click="tabact('stop-limit')" class="btn btn-light tabss">Stop-Limit</button>
               </div><br>
               <div class="tabsss market">
               <div style="width:50%;height:350px;position:absolute;left:0;bottom:0;padding:15px;color:#cacadc" >
@@ -88,19 +88,19 @@
               <form @submit.prevent="mbuy()">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; background:rgba(255,255,255,.2)">USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; background:rgba(255,255,255,.2)">Price</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; background:rgba(255,255,255,.2)">USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; background:rgba(255,255,255,.2)">Price</span>
                   </div>
                   <input readonly disabled placeholder="بهترین قیمت بازار" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right; background:rgba(255,255,255,.2)">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                   </div>
-                    <input v-model="mb_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                    <input v-model="mb_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
-                <p style=";font-family:'arial'">  {{mb_amount}}  USDT : مبلغ کل</p>
+                <p style=";font-family:'UD'!important">  {{mb_amount}}  USDT : مبلغ کل</p>
                 <br>
                 <input type="submit" value="خرید" class="btn btn-success" style="width:100%;border-radius:0">
               </form>
@@ -110,19 +110,19 @@
                <form @submit.prevent="msell()">
                  <div class="input-group mb-3">
   <div class="input-group-prepend" style="direction:rtl">
-            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; background:rgba(255,255,255,.2)">USDT</span>
-    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; background:rgba(255,255,255,.2)">Price</span>
+            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; background:rgba(255,255,255,.2)">USDT</span>
+    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; background:rgba(255,255,255,.2)">Price</span>
   </div>
   <input readonly disabled placeholder="بهترین قیمت بازار" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right; background:rgba(255,255,255,.2)">
 </div>
                
                               <div class="input-group mb-3">
   <div class="input-group-prepend" style="direction:rtl">
-            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">USDT</span>
-    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  </div>
-  <input v-model="ms_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">USDT</span>
+    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  </div>
+  <input v-model="ms_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
 </div>
-<p style=";font-family:'arial'">  ~~ USDT : مبلغ کل</p>
+<p style=";font-family:'UD'!important">  ~~ USDT : مبلغ کل</p>
 <br>
 <input type="submit" value="فروش" class="btn btn-danger" style="width:100%;border-radius:0">
                </form>
@@ -134,19 +134,19 @@
               <form @submit.prevent="lbuy()">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Price</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Price</span>
                   </div>
-                  <input v-model="lb_price" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                  <input v-model="lb_price" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                   </div>
-                    <input v-model="lb_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                    <input v-model="lb_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
-                <p style=";font-family:'arial'">  {{lb_amount * lb_price}}  USDT : مبلغ کل</p>
+                <p style=";font-family:'UD'!important">  {{lb_amount * lb_price}}  USDT : مبلغ کل</p>
                 <br>
                 <input type="submit" value="خرید" class="btn btn-success" style="width:100%;border-radius:0">
               </form>
@@ -156,19 +156,19 @@
                <form @submit.prevent="lsell()">
                  <div class="input-group mb-3">
   <div class="input-group-prepend" style="direction:rtl">
-            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">USDT</span>
-    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Price</span>
+            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">USDT</span>
+    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Price</span>
   </div>
-  <input v-model="ls_price" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'arial' ">
+  <input v-model="ls_price" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'UD'!important ">
 </div>
                
                               <div class="input-group mb-3">
   <div class="input-group-prepend" style="direction:rtl">
-            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" >USDT</span>
-    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  </div>
-  <input v-model="ls_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+            <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" >USDT</span>
+    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  </div>
+  <input v-model="ls_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
 </div>
-<p style=";font-family:'arial'"> {{ls_amount * ls_price}} USDT : مبلغ کل</p>
+<p style=";font-family:'UD'!important"> {{ls_amount * ls_price}} USDT : مبلغ کل</p>
 <br>
 <input type="submit" value="فروش" class="btn btn-danger" style="width:100%;border-radius:0">
                </form>
@@ -183,20 +183,20 @@
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Stop</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Stop</span>
                   </div>
-                  <input v-model="lsb_stop" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                  <input v-model="lsb_stop" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
 
 
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Limit</span>  
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Limit</span>  
                   </div>
-                    <input v-model="lsb_limit" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                    <input v-model="lsb_limit" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
 
 
@@ -204,15 +204,15 @@
 
                 <div class="input-group mb-3">
                   <div class="input-group-prepend" style="direction:rtl">
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" >USDT</span>
-                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" >USDT</span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  
                   </div>
-                    <input v-model="lsb_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                    <input v-model="lsb_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                 </div>
 
 
 
-                <p style=";font-family:'arial'">  {{lsb_amount * lsb_limit}}  USDT : مبلغ کل</p>
+                <p style=";font-family:'UD'!important">  {{lsb_amount * lsb_limit}}  USDT : مبلغ کل</p>
                 <br>
                 <input type="submit" value="خرید" class="btn btn-success" style="width:100%;border-radius:0">
               </form>
@@ -225,19 +225,19 @@
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'; ">USDT</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'; ">Stop</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important; ">USDT</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important; ">Stop</span>
                     </div>
-                    <input v-model="lss_stop" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'arial' ">
+                    <input v-model="lss_stop" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number"  style="background:none; border-style:solid;border-radius:0;border-color:grey; text-align:right;font-family:'UD'!important ">
                   </div>
 
 
                                 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'">USDT</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Limit</span>  </div>
-                    <input v-model="lss_limit" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important">USDT</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Limit</span>  </div>
+                    <input v-model="lss_limit" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                   </div>
 
 
@@ -245,14 +245,14 @@
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend" style="direction:rtl">
-                              <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'arial'" >USDT</span>
-                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'arial'">Amount</span>  </div>
-                    <input v-model="lss_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'arial'">
+                              <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-left:none;border-right:none;border-radius:0;border-color:grey;font-family:'UD'!important" >USDT</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default" style="background:none;border-right:none;border-radius:0;border-color:grey;color:white;font-family:'UD'!important">Amount</span>  </div>
+                    <input v-model="lss_amount" class="form-control" step="any" min="0" aria-label="Default" aria-describedby="inputGroup-sizing-default" type="number" style="background:none; border-style:solid;border-radius:0;border-color:grey;text-align: right;font-family:'UD'!important">
                   </div>
 
 
 
-                  <p style=";font-family:'arial'"> {{lss_amount * lss_limit}} USDT : مبلغ کل</p>
+                  <p style=";font-family:'UD'!important"> {{lss_amount * lss_limit}} USDT : مبلغ کل</p>
                   <br>
                   <input type="submit" value="فروش" class="btn btn-danger" style="width:100%;border-radius:0">
                </form>
@@ -263,7 +263,7 @@
       <b-card no-body class="mb-3 col-3 cardss" style=";height:510px;margin-top:-40px">
         <h1 style="width:100%;height:50px;background:rgba(0,0,0,0.4);padding:8px;text-align:left;color:#cacadc;margin:0;color:green">{{boardinfo.last}} <br></h1>
           <h5 style="width:100%;height:40px;background:black;padding:8px;text-align:center;color:#cacadc;margin:0">درخواست های فروش</h5>
-          <table v-if="boardinfo.bids"  style="text-align:right; color:white;font:14px 'arial';" class="">
+          <table v-if="boardinfo.bids"  style="text-align:right; color:white;font:14px 'UD';" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:30%">مجموع</th>
                   <th scope="col" style="width:30%">قیمت</th>
@@ -271,7 +271,7 @@
               </tr>
           <tr v-for="(item, idx) in boardinfo.bids.slice(0,10)" v-bind:key="idx">
             <td style="width:30%;">{{(item[1] * item[0]).toFixed(2)}}</td>
-             <td @click="fillneg(item[0])" style="width:30%;color:red;font-family:'arial'">{{item[0]}}</td>
+             <td @click="fillneg(item[0])" style="width:30%;color:red;font-family:'UD'!important">{{item[0]}}</td>
              <td style="width:30%;">{{item[1]}}</td>
           </tr>
           </table>
@@ -288,7 +288,7 @@
       <b-tabs no-body class="col-12 cardss" style="height:auto;margin-bottom:50px">
         <b-tab title="سفارشات باز" style="width:100%">
         <h5 style="width:100%;height:4px;background:black;padding:0px;text-align:center;color:#cacadc;margin:0"></h5>
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:12% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:12% ; text-align:center">قرارداد</th>
@@ -326,7 +326,7 @@
       </b-tab>
       <b-tab title="(استاپ) سفارشات باز" style="height:auto;margin-bottom:50px;width:100%">
         <h5 style="width:100%;height:4px;background:black;padding:0px;text-align:center;color:#cacadc;margin:0"></h5>
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:12% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:12% ; text-align:center">قرارداد</th>
@@ -371,7 +371,7 @@
 
           <b-tab title="سابقه سفارشات" class="cardss">
         <div style="width:100%;height:1px;background:black;padding:2px;text-align:center;color:#cacadc;margin:0"></div>          
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:14% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:14% ; text-align:center">مقدار</th>
@@ -406,7 +406,7 @@
           </b-tab>
            <b-tab title="(استاپ) سابقه سفارشات" class="cardss">
         <div style="width:100%;height:1px;background:black;padding:2px;text-align:center;color:#cacadc;margin:0"></div>          
-          <table style="text-align:right; color:white;font:14px 'arial';width:100%" class="">
+          <table style="text-align:right; color:white;font:14px 'UD';width:100%" class="">
               <tr style="width:100%;background:rgba(0,0,0,0.4);box-sizing:border-box">
                   <th scope="col" style="width:14% ; text-align:center">زمان معامله</th>
                   <th scope="col" style="width:14% ; text-align:center">مقدار</th>
