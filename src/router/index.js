@@ -39,7 +39,7 @@ router.afterEach(() => {
     splashScreen.style.opacity = 0
     setTimeout(() =>
       splashScreen && splashScreen.parentNode && splashScreen.parentNode.removeChild(splashScreen)
-    , 300)
+    , 1)
   }
 
   // On small screens collapse sidenav

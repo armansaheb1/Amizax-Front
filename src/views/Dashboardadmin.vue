@@ -58,7 +58,6 @@
         .get('/pricehistory')
         .then(response => {
           for (item of response.data){
-            alert(item)
           }
         })
         .catch(data => {

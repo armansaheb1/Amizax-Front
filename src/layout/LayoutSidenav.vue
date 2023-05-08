@@ -23,6 +23,7 @@
 
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">ناحیه کاربری</sidenav-header>
+      <sidenav-divider class="mb-1"/>
 
       <sidenav-router-link icon="fa-solid fa-circle-user" to="/user" :exact="true">اطلاعات کاربر</sidenav-router-link>
       <sidenav-router-link icon="fa-solid fa-circle-check" to="/user-level" :exact="true"> تایید هویت</sidenav-router-link>
@@ -32,6 +33,7 @@
       
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">مالی</sidenav-header>
+      <sidenav-divider class="mb-1"/>
       <sidenav-router-link icon="fa-brands fa-bitcoin" to="/wallets" :exact="true">کیف های من</sidenav-router-link>
       <sidenav-menu icon="fa-solid fa-sack-dollar"  to="/typography" :exact="true">
        <template slot="link-text">حسابداری</template>
@@ -41,36 +43,36 @@
         <sidenav-router-link class="small font-weight-semibold"  to="/addcard">اضافه کردن کارت</sidenav-router-link>
       </sidenav-menu>
       <!-- UI elements -->
+      <sidenav-divider class="mb-1"/>
+      <sidenav-header class="small font-weight-semibold">معاملات مستقیم</sidenav-header>
+      <sidenav-divider class="mb-1"/>
 
-      <sidenav-divider class="mb-1"/>
-            <sidenav-router-link icon="fa-solid fa-rotate" to="/exchange" :exact="true">اکسچینج</sidenav-router-link>
-      <sidenav-divider class="mb-1"/>
-      <sidenav-header class="small font-weight-semibold">خرید</sidenav-header>
+      <sidenav-router-link icon="fa-solid fa-rotate" to="/exchange" :exact="true">اکسچینج</sidenav-router-link>
+
       <sidenav-router-link icon="fa-solid fa-store" to="/buy-out" :exact="true"> خرید خارجی</sidenav-router-link>
       <sidenav-router-link icon="fa-solid fa-store" to="/buy" :exact="true"> خرید داخلی </sidenav-router-link>
       
-      
-      <sidenav-divider class="mb-1"/>
-      <sidenav-header class="small font-weight-semibold">فروش</sidenav-header>
+
       <sidenav-router-link icon="fa-solid fa-store" to="/sell" :exact="true"> فروش داخلی </sidenav-router-link>
       <sidenav-router-link icon="fa-solid fa-store" to="/sell-out" :exact="true"> فروش خارجی </sidenav-router-link>
       
 
+      <sidenav-divider class="mb-1"/>
+      <sidenav-header class="small font-weight-semibold">معاملات لحظه ای</sidenav-header>
+      <sidenav-divider class="mb-1"/>
+      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/perpetual-trade/BTCUSDT" :exact="true">بازار پرپشوال</sidenav-router-link>
+      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/margin-trade/BTCUSDT" :exact="true"> بازار مارجین</sidenav-router-link>
+
 
       <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">سوابق معاملات</sidenav-header>
+      <sidenav-divider class="mb-1"/>
       <sidenav-router-link icon="fa-solid fa-spinner" to="/open-orders" :exact="true"> سفارشات باز داخلی</sidenav-router-link>
       <sidenav-router-link icon="fa-solid fa-clock" to="/history" :exact="true">تاریخچه سفارشات داخلی</sidenav-router-link>
       <sidenav-router-link icon="fa-solid fa-spinner" to="/open-orders-out" :exact="true">سفارشات باز خارجی</sidenav-router-link>
       <sidenav-router-link icon="fa-solid fa-clock" to="/history-out" :exact="true">تاریخچه سفارشات خارجی</sidenav-router-link>
 
-      <sidenav-divider class="mb-1"/>
 
-
-      <sidenav-divider class="mb-1"/>
-      <sidenav-header class="small font-weight-semibold">معاملات لحظه ای</sidenav-header>
-      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/perpetual-trade/BTCUSDT" :exact="true">بازار پرپشوال</sidenav-router-link>
-      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/margin-trade/BTCUSDT" :exact="true"> بازار مارجین</sidenav-router-link>
       <!-- UI elements -->
 
       <sidenav-divider class="mb-1"/>

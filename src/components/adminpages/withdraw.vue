@@ -119,7 +119,6 @@ export default {
         })
     },
     async accept (id) {
-      alert(id)
       await axios
         .post('adminpanel/withdraw', {id: id})
         .then(response => {

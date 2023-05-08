@@ -111,7 +111,6 @@ export default {
         })
     },
     async accept (id) {
-      alert(id)
       await axios
         .post('adminpanel/cwithdraw', {id: id})
         .then(response => {

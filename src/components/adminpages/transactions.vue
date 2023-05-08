@@ -137,7 +137,6 @@ export default {
       await axios
         .get('/adminpanel/transactions')
         .then(response => {
-          console.log(response)
           this.transactions = response.data
         })
     },

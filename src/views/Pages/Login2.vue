@@ -336,7 +336,6 @@ export default {
       }
       if (this.errors.length) {
         this.$loading(false)
-        console.log(this.errors)
         var errors = this.errors
         var error = '<div class="swal2-icon swal2-error swal2-icon-show" style="display: flex;"><span class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span></div><h5>'
         for (var er = 0; er < errors.length; er++) {

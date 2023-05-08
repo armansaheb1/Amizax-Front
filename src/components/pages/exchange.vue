@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card v-if="sym && sym2  && price && price2"> 
-      <h3 v-if="sym && sym2  && price && price2" style="float:right; color:#888" > قیمت نسبی ارز  ها: <a style="font:20px 'UD'">{{this.price.buy  / this.price2.buy }}</a></h3>
+      <h3 v-if="sym && sym2  && price && price2" style="float:right; color:#888" > قیمت نسبی ارز  ها: <a style="font:20px ; font-family: 'UD'!important; color: white">{{(this.price.buy  / this.price2.buy).toFixed(4) }}</a></h3>
       </b-card>
         <b-card-header class="row no-gutters align-items-center">تبدیل</b-card-header>
 
@@ -144,7 +144,7 @@ export default {
     },
     gettings() {
       if(this.sym && this.sym2){
-        if((this.sym in this.leverage))
+        if((this.sym in this.leverage || this.sym === 'USDT'))
         {
           if(this.price){
         var prices = parseFloat(this.price.buy  / this.price2.buy ) * this.userfee * 1.015
@@ -155,7 +155,7 @@ export default {
     },
     payings() {
       if(this.sym && this.sym2){
-        if((this.sym in this.leverage))
+        if((this.sym in this.leverage || this.sym === 'USDT'))
         {
           if(this.price){
             
@@ -167,7 +167,7 @@ export default {
     },
     tv (a) {
       this.tvs = true
-      if((this.sym in this.leverage))
+      if((this.sym in this.leverage || this.sym === 'USDT'))
       {
        this.getprice(true)
        this.getprice2()

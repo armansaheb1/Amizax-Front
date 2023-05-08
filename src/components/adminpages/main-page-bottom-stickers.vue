@@ -121,7 +121,6 @@ export default {
     async submit () {
       if ( this.postid ){
         const formdata = new FormData()
-        alert(this.postid)
         formdata.append('id' , this.postid)
         formdata.append('text' , this.text)
         formdata.append('title' , this.title)

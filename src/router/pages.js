@@ -166,7 +166,10 @@ export default [{
       }, {
         path: 'perpetualrequest',
         component: () => import('@/components/pages/perpetualrequest')
-      }, 
+      }, {
+        path: 'p2p',
+        component: () => import('@/components/pages/p2p')
+      },
     ]
   },
   {

@@ -134,7 +134,6 @@ export default {
   },
   methods: {
     updateProfile() {
-      alert('Your data: ' + JSON.stringify(this.user));
     }
   }
 };

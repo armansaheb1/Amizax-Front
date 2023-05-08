@@ -105,7 +105,7 @@
 
     <br />
     <table
-      class="table"
+      class="table table-striped"
       style="direction: rtl !important; margin: 0; max-height: 350px"
     >
       <thead>
@@ -134,19 +134,26 @@
             <br /><a style="font-family: 'UD' !important">
               {{ USDTprice.toFixed(2) }}<br
             /></a>
-            <hr style="margin: 0 !important" class="omobile" />
-            <a style="font-family: " class="omobile"
-              >خرید : <br />{{
-                parseInt(USDTprice * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
-              <br />
-              فروش :‌ <br />{{
-                parseInt(USDTprice * rialprice * 0.994)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
+
+            <a
+              style="font-family: 'UD' !important; margin-top: 8px"
+              class="omobile"
+              >Buy
+              <a style="font-family: 'UD' !important; color: green"
+                ><br />{{
+                  parseInt(USDTprice * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+                <br /><br /> </a
+              >Sell
+              <a style="font-family: 'UD' !important; color: red">
+                ‌ <br />{{
+                  parseInt(USDTprice * rialprice * 0.994)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+              </a>
             </a>
           </td>
           <td
@@ -255,20 +262,27 @@
             <br /><a style="font-family: 'UD' !important">
               {{ item.buy }}<br
             /></a>
-            <hr style="margin: 0 !important" class="omobile" />
-            <a style="font-family: " class="omobile"
-              >خرید : <br />{{
-                parseInt(item.buy * 1.007 * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
 
-              <br />
-              فروش :‌ <br />{{
-                parseInt(item.buy * 1.001 * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
+            <a
+              style="font-family: 'UD' !important; margin-top: 8px"
+              class="omobile"
+              >Buy
+              <a style="font-family: 'UD' !important; color: green"
+                ><br />{{
+                  parseInt(item.buy * 1.007 * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+
+                <br /><br /> </a
+              >Sell
+              <a style="font-family: 'UD' !important; color: red">
+                ‌ <br />{{
+                  parseInt(item.buy * 1.001 * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+              </a>
             </a>
           </td>
           <td
@@ -382,8 +396,6 @@
               >برداشت</router-link
             >
           </th>
-        </tr>
-        <tr v-for="(item, name, idx) in info" v-bind:key="idx + 'd'">
           <td
             v-if="
               name.replace('USDT', '') !== 'USDT' &&
@@ -432,20 +444,27 @@
           >
             <br />
             <a style="font-family: 'UD' !important">{{ item.buy }}<br /></a>
-            <hr style="margin: 0 !important" class="omobile" />
-            <a style="font-family: " class="omobile"
-              >خرید :<br />
-              {{
-                parseInt(item.buy * 1.007 * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
-              <br />
-              فروش :‌ <br />{{
-                parseInt(item.buy * 1.001 * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
+
+            <a
+              style="font-family: 'UD' !important; margin-top: 8px"
+              class="omobile"
+              >Buy
+              <a style="font-family: 'UD' !important; color: green">
+                <br />
+                {{
+                  parseInt(item.buy * 1.007 * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+                <br /><br /> </a
+              >Sell
+              <a style="font-family: 'UD' !important; color: red">
+                ‌ <br />{{
+                  parseInt(item.buy * 1.001 * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+              </a>
             </a>
           </td>
           <td
@@ -593,20 +612,27 @@
             <br /><a style="font-family: 'UD' !important">
               {{ item.buy }}<br
             /></a>
-            <hr style="margin: 0 !important" class="omobile" />
-            <a style="font-family: " class="omobile"
-              >خرید : <br />{{
-                parseInt(item.buy * 1.007 * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
 
-              <br />
-              فروش :‌ <br />{{
-                parseInt(item.buy * 1.001 * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
+            <a
+              style="font-family: 'UD' !important; margin-top: 8px"
+              class="omobile"
+              >Buy
+              <a style="font-family: 'UD' !important; color: green"
+                ><br />{{
+                  parseInt(item.buy * 1.007 * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+
+                <br /><br /> </a
+              >Sell
+              <a style="font-family: 'UD' !important; color: red">
+                ‌ <br />{{
+                  parseInt(item.buy * 1.001 * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+              </a>
             </a>
           </td>
           <td
@@ -698,19 +724,26 @@
             <br /><a style="font-family: 'UD' !important">
               {{ USDTprice }}<br
             /></a>
-            <hr style="margin: 0 !important" class="omobile" />
-            <a style="font-family: " class="omobile"
-              >خرید : <br />{{
-                parseInt(USDTprice * rialprice)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
-              <br />
-              فروش :‌ <br />{{
-                parseInt(USDTprice * rialprice * 0.994)
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }}
+
+            <a
+              style="font-family: 'UD' !important; margin-top: 8px"
+              class="omobile"
+              >Buy
+              <a style="font-family: 'UD' !important; color: green"
+                ><br />{{
+                  parseInt(USDTprice * rialprice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+                <br /><br /> </a
+              >Sell
+              <a style="font-family: 'UD' !important; color: red">
+                ‌ <br />{{
+                  parseInt(USDTprice * rialprice * 0.994)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                }}
+              </a>
             </a>
           </td>
           <td
@@ -1135,8 +1168,6 @@ export default {
           );
         })
       );
-      console.log(Object.entries(this.info3));
-      console.log(sortable);
       return sortable;
     },
   },
@@ -1286,7 +1317,6 @@ export default {
             this.slides.push(temp);
           }
         }
-        console.log(this.slides);
         var temp2 = [];
         var i = 0;
         for (i; i < response.data.length; i++) {
@@ -1338,7 +1368,7 @@ export default {
       }
     },
   },
-  beforeMount() {
+  mounted() {
     this.getusdtprice();
     this.getc2();
     this.gettop();
@@ -1390,7 +1420,7 @@ export default {
   display: none;
   font-size: 16px;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1050px) {
   .mainhead {
     font: 25px "yekan";
     color: #ececec;

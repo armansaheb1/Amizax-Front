@@ -153,7 +153,6 @@ export default {
         .get('/buyopen')
         .then(data => {
           this.buymaintrades = data.data
-          console.log(data)
         })
     }
   }

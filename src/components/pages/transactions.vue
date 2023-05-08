@@ -137,7 +137,6 @@ export default {
     },
     async gettransactions(id) {
       await axios.get("/transactions").then((response) => {
-        console.log(response);
         this.transactions = response.data;
       });
     },

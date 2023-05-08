@@ -1,12 +1,12 @@
 <template>
   <div>
-    <b-card v-if="price && rialprice">             
-      <h3 style="float:right; color:#888" v-if="price && rialprice && this.sym !== 'USDT'">قیمت : <a style="font:20px 'UD'">{{price.buy *rialprice[0].rial * 1.007}}</a></h3>
-      <h3 style="float:left; color:#888" v-if="price && this.sym !== 'USDT'">قیمت دلاری : <a style="font:20px 'UD'">{{(price.buy )}}</a></h3>
+    <b-card v-if="price && rialprice" >             
+      <h3 style="float:right; color:#888" v-if="price && rialprice && this.sym !== 'USDT'">قیمت : <a style="font:20px ; font-family: 'UD'!important; color: white">{{parseInt(price.buy *rialprice[0].rial * 1.007).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</a></h3>
+      <h3 style="float:left; color:#888" v-if="price && this.sym !== 'USDT'">قیمت دلاری : <a style="font:20px ; font-family: 'UD'!important; color: white">{{(price.buy )}}</a></h3>
 
-      <h3 style="float:right; color:#888" v-if="price && rialprice && this.sym === 'USDT'">قیمت : <a style="font:20px 'UD'">{{price.buy *rialprice[0].rial }}</a></h3>
-      <h3 style="float:left; color:#888" v-if="price && this.sym === 'USDT'">قیمت دلاری : <a style="font:20px 'UD'">{{(price.buy )}}</a></h3>
-</b-card>
+      <h3 style="float:right; color:#888" v-if="price && rialprice && this.sym === 'USDT'">قیمت : <a style="font:20px ; font-family: 'UD'!important; color: white">{{parseInt(price.buy *rialprice[0].rial).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</a></h3>
+      <h3 style="float:left; color:#888" v-if="price && this.sym === 'USDT'">قیمت دلاری : <a style="font:20px ; font-family: 'UD'!important; color: white">{{(price.buy )}}</a></h3>
+    </b-card>
     <b-card>
       <b-card-header class="row no-gutters align-items-center">خرید</b-card-header>
 
@@ -120,7 +120,7 @@ export default {
       }
     },
     gettings() {
-      if((this.sym in this.leverage))
+      if((this.sym in this.leverage || this.sym === 'USDT'))
       {
         if(this.price){
           if (this.amount < 1000000){
@@ -139,7 +139,7 @@ export default {
       }
     },
     payings() {
-      if((this.sym in this.leverage))
+      if((this.sym in this.leverage || this.sym === 'USDT'))
       {
         if(this.price){
           if(this.sym === 'USDT'){
@@ -154,43 +154,43 @@ export default {
       }
     },
     tv (a) {
-      if((this.sym in this.leverage))
-      {
-      this.getprice()
-      if(a) { 
-        if(this.sym == 'USDT'){
-        new TradingView.widget(
+      if((this.sym in this.leverage || this.sym === 'USDT'))
         {
-        "width": screen.width * .7,
-        "height": 390,
-        "symbol": `${this.sym}USD`,
-        "timezone": "Etc/UTC",
-        "theme": "light",
-        "style": "1",
-        "locale": "en",
-        "hide_side_toolbar": false,
-        "enable_publishing": false,
-        "allow_symbol_change": true,
-        "container_id": "tradingview_1be21"
-      })
-      }else{
-        new TradingView.widget(
-        {
-        "width": screen.width * .7,
-        "height": 390,
-        "symbol": `${this.sym}USDT`,
-        "timezone": "Etc/UTC",
-        "theme": "light",
-        "hide_side_toolbar": false,
-        "style": "1",
-        "locale": "en",
-        "enable_publishing": false,
-        "allow_symbol_change": true,
-        "container_id": "tradingview_1be21"
-      }
-      )
-      }
-      }
+        this.getprice()
+        if(a) { 
+          if(this.sym == 'USDT'){
+          new TradingView.widget(
+          {
+          "width": screen.width * .7,
+          "height": 390,
+          "symbol": `${this.sym}USD`,
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "style": "1",
+          "locale": "en",
+          "hide_side_toolbar": false,
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_1be21"
+        })
+        }else{
+          new TradingView.widget(
+          {
+          "width": screen.width * .7,
+          "height": 390,
+          "symbol": `${this.sym}USDT`,
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "hide_side_toolbar": false,
+          "style": "1",
+          "locale": "en",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_1be21"
+        }
+        )
+        }
+        } 
       }
     },
     async getlev () {
@@ -210,14 +210,14 @@ export default {
           this.userfee = (response.data[0].buy / 100) + 1
         })
     },
-    async getprice () {
+    async getprice() {
       await axios
         .post('/cp_ticker' , {sym: this.sym})
         .then(response => {
           this.price = response.data
           setTimeout(() => {
             this.tv(false)
-          }, 5000);
+          }, 2000);
         })
     },
     async getrialprice () {
@@ -284,7 +284,7 @@ export default {
     async submit () {
         this.$loading(true)
       this.errors = []
-      if (!(this.sym in this.leverage)){
+      if (!(this.sym in this.leverage || this.sym === 'USDT')){
         this.$swal(`<div class="swal2-icon swal2-error swal2-icon-show" style="display: flex;"><span class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span></div><h5>لطفا ارزی را از لیست انتخاب کنید</h5>`)
         return false
       }
@@ -347,11 +347,11 @@ export default {
         deep: true
       },
     sym: {
-        handler: function() {
-            this.tv(true); 
-        },
-        deep: true
-      }
+      handler: function() {
+        this.tv(true)
+      },
+      deep: true
+    },
   },       
 }
 </script>

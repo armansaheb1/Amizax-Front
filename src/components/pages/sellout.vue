@@ -1,11 +1,11 @@
 <template>
   <div>
         <b-card v-if="price"> 
-          <h3 v-if="this.sym !== 'USDT' && price && rialprice" style="float:right; color:#888" >قیمت ریالی : <a style="font:20px 'UD'">{{price.buy *rialprice[0].rial * 1.002}}</a></h3>
-      <h3 v-if="this.sym !== 'USDT' && price" style="float:left; color:#888" >قیمت دلاری : <a style="font:20px 'UD'">{{(price.buy )}}</a></h3>
+          <h3 v-if="this.sym !== 'USDT' && price && rialprice" style="float:right; color:#888" >قیمت ریالی : <a style="font:20px ; font-family: 'UD'!important; color: white">{{parseInt(price.buy *rialprice[0].rial * 1.002).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</a></h3>
+      <h3 v-if="this.sym !== 'USDT' && price" style="float:left; color:#888" >قیمت دلاری : <a style="font:20px ; font-family: 'UD'!important; color: white">{{(price.buy )}}</a></h3>
 
-      <h3 v-if="this.sym === 'USDT' && price && rialprice" style="float:right; color:#888" >قیمت ریالی : <a style="font:20px 'UD'">{{price.buy *rialprice[0].rial * 0.996}}</a></h3>
-      <h3 v-if="this.sym === 'USDT' && price" style="float:left; color:#888" >قیمت دلاری : <a style="font:20px 'UD'">{{(price.buy )}}</a></h3>
+      <h3 v-if="this.sym === 'USDT' && price && rialprice" style="float:right; color:#888" >قیمت ریالی : <a style="font:20px ; font-family: 'UD'!important; color: white">{{parseInt(price.buy *rialprice[0].rial * 0.996).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</a></h3>
+      <h3 v-if="this.sym === 'USDT' && price" style="float:left; color:#888" >قیمت دلاری : <a style="font:20px ; font-family: 'UD'!important; color: white">{{(price.buy )}}</a></h3>
         </b-card>
 
             <b-card-header class="row no-gutters align-items-center">فروش</b-card-header>
@@ -115,7 +115,7 @@ export default {
   }),
   methods: {
     gettings() {
-      if((this.sym in this.leverage))
+      if((this.sym in this.leverage || this.sym === 'USDT'))
       {
         if(this.price){
           if(this.sym === 'USDT'){
@@ -130,7 +130,7 @@ export default {
       }
     },
     payings() {
-      if((this.sym in this.leverage))
+      if((this.sym in this.leverage || this.sym === 'USDT'))
       {
         if(this.price){
           if (this.sym === 'USDT'){
@@ -146,7 +146,7 @@ export default {
     },
     tv (a) {
       this.price = []
-      if((this.sym in this.leverage))
+      if((this.sym in this.leverage || this.sym === 'USDT'))
       {
         this.getprice()
       if(a) { 

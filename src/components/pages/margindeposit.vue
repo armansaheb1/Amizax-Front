@@ -172,7 +172,6 @@ export default {
       await axios
         .post('/cp_transfer' , {from_account: this.fromaccount1 , to_account: this.toaccount1,amount: this.amount1 , coin_type:this.sym})
         .then(response => {
-          alert(response.data)
         })
     },
     async submitform2 () {
@@ -186,7 +185,6 @@ export default {
       await axios
         .post('/cp_transfer' , {from_account: this.fromaccount2 , to_account: this.toaccount2,amount: this.amount2 , coin_type:this.sym})
         .then(response => {
-          alert(response.data)
         })
     },
     async getmargin () {

@@ -380,7 +380,6 @@ export default {
         .get('/userinfo')
         .then(response => {
           this.referalid = response.data[0].get_referal
-          console.log(response)
         })
     },
   },

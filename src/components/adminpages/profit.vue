@@ -131,7 +131,6 @@ export default {
       await axios
         .get('/adminpanel/profit_rial')
         .then(response => {
-          console.log(response)
           this.transactions = response.data
         })
     },

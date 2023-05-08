@@ -656,6 +656,7 @@ export default {
     this.checklevel()
   },
   mounted () {
+    this.start2()
     this.getbal(true)
     this.getc()
     this.getb()
@@ -669,7 +670,6 @@ export default {
   },
   watch: {
     alert2: (val)=>{
-      alert(val)
     },
     lb_all: {
         handler: function() {
@@ -685,6 +685,103 @@ export default {
       }
   },
   methods: {
+    start() {
+      this.asks1 = JSON.parse(JSON.stringify(this.asks2)).reverse();
+      this.bids1 = JSON.parse(JSON.stringify(this.bids2));
+      var askall = 0;
+      var bidall = 0;
+      for (var item of this.asks1) {
+        askall = askall + parseFloat(item[1]);
+      }
+      for (var item of this.bids1) {
+        bidall = bidall + parseFloat(item[1]);
+      }
+      this.askper = parseInt((askall / (askall + bidall)) * 100 + 0.5);
+      this.bidper = parseInt((bidall / (askall + bidall)) * 100 + 0.5);
+
+      if (this.last2.bestAsk) {
+        this.last = this.last2;
+      }
+
+      setTimeout(() => {
+        this.start();
+      }, 1000);
+    },
+    start2() {
+      this.connection = new WebSocket(
+        "wss://perpetual.coinex.com/"
+      );
+      this.connection2 = new WebSocket(
+        "wss://perpetual.coinex.com/"
+      );
+
+      this.connection.onmessage = (event) => {
+        console.log(JSON.parse(event.data))
+        return
+        if (JSON.parse(event.data).data) {
+          this.asks2 = JSON.parse(event.data).data.asks.slice(0, 6);
+          this.bids2 = JSON.parse(event.data).data.bids.slice(0, 6);
+          var sortedArray = this.asks2.sort(function (a, b) {
+            return b[1] - a[1];
+          });
+          this.asks2 = sortedArray.reverse();
+          this.askmax = sortedArray[0][1];
+          var sortedArray = this.bids2.sort(function (a, b) {
+            return a[1] - b[1];
+          });
+          this.bids2 = sortedArray;
+          this.bidmax = sortedArray[0][1];
+          this.loading = false;
+        }
+      };
+
+      this.connection2.onmessage = (event) => {
+        if (JSON.parse(event.data).data) {
+          this.last2 = JSON.parse(event.data).data;
+        }
+      };
+
+      this.connection2.onopen = () => {
+        this.send();
+      };
+      this.connection.onclose = () => {
+        
+      };
+    },
+    send() {
+      if (
+        this.connection.readyState !== WebSocket.OPEN ||
+        this.connection2.readyState !== WebSocket.OPEN
+      ) {
+        setTimeout(() => {
+          this.send();
+        }, 500);
+        return;
+      }
+      this.connection.send(
+        JSON.stringify({
+          "method": "depth.query",
+          "params": [
+            "BTCUSDT",
+            10,
+            "0" 
+          ],
+          "id": 15
+        })
+      );
+      this.connection2.send(
+        JSON.stringify({
+          id: 1545910660739,
+          type: "subscribe",
+          topic: `/market/ticker:${
+            this.symbol.baseCurrency.replace("XBT", "BTC") +
+            "-" +
+            this.symbol.quoteCurrency
+          }`,
+          response: true,
+        })
+      );
+    },
     liqu() {
      this.liquidation = ((this.repaybuymax2 * 1.0185 + Number(this.balances.data.interest.buy_type) - Number(this.balances.data.balance.buy_type))/(Number(this.balances.data.balance.sell_type) - Number(this.balances.data.interest.sell_type) - this.repaysellmax2 * 1.0185)).toFixed(6)
      if(this.liquidation <= 0){
@@ -1331,7 +1428,6 @@ export default {
           this.getbal(false)
           }
         }).catch(data =>{
-          console.log(data.response.data)
           toast({
             message: `${data.response.data}`,
             type: 'is-danger',

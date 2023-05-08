@@ -169,7 +169,6 @@ export default {
               .post('chats/')
               .then(data => data.data)
               .then(data => {
-                console.log(data)
               this.sessionStarted = true
               this.uri = data.uri
               this.startChatSession()
@@ -256,7 +255,6 @@ export default {
       .get(`chats/${this.uri}/messages/`) 
       .then(data => {
         this.messages = data.data.messages
-        console.log(data.data.messages)
         var tempnotread = 0
         this.notread = data.data.notseen
         this.chatseen()

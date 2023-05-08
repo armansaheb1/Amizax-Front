@@ -57,20 +57,8 @@ export default {
 </script>
 <style lang="scss">
 @font-face {
-  font-family: "UB";
-  src: url("./../public/URWDIN-Black.woff") format('woff');
-}
-@font-face {
-  font-family: "UX";
-  src: url("./../public/URWDIN-XLight.woff") format('woff');
-}
-@font-face {
   font-family: "UR";
   src: url("./../public/URWDIN-Regular.woff") format('woff');
-}
-@font-face {
-  font-family: "UM";
-  src: url("./../public/URWDIN-Medium.woff") format('woff');
 }
 @font-face {
   font-family: "UD";
@@ -78,9 +66,9 @@ export default {
 }
 @font-face {
     font-family: 'Yekan';
-    src: url('/Yekan.eot');
-    src: url('/Yekan.eot?#iefix') format('embedded-opentype'),
-		 url('/Yekan.ttf') format('truetype');
+    src: url('./../public/Yekan.eot');
+    src: url('./../public/Yekan.eot?#iefix') format('embedded-opentype'),
+		 url('./../public/Yekan.ttf') format('truetype');
     font-weight: normal;
 }
 .vm--modal{

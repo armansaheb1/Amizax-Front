@@ -140,7 +140,6 @@ export default {
       await axios
         .get('/adminpanel/cp_history/all')
         .then(response => {
-          console.log(response)
           this.transactions = response.data.data
         })
     },

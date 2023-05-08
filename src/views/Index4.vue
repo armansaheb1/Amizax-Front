@@ -29,7 +29,7 @@
           </table>
           <div class="table-responsive " style="margin-bottom:-20px; max-height:450px; overflow:auto ; background:white" >
         <table class="table " style="direction:rtl!important">
-          <tbody v-if="info" style="font:20px 'UD'; max-height:320px" >
+          <tbody v-if="info" style="font:20px ; font-family: 'UD'!important; color: white; max-height:320px" >
             <tr v-if="pp[2] && ('USDT').includes(searchtext.toUpperCase())">
               <td class="coin cent"><template class="wmobile"><img src="https://raw.githubusercontent.com/ErikThiart/cryptocurrency-icons/master/64/tether.png" alt=""></template><br>{{pp[2].id}}</td>
               <td class="coin cent nnmobile"><br>{{USDTprice}}</td>
@@ -308,7 +308,6 @@
               this.slides.push(temp)
             }
           }
-          console.log(this.slides)
           var temp2 = []
           var i=0
             for(i ; i<response.data.length; i++){
