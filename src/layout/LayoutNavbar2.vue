@@ -52,16 +52,6 @@
             اخبار
           </span>
         </b-nav-item>
-        <b-nav-item to="/margin-trade/BTCUSDT">
-          <span class="nav-link-inner--text" style="color: #cecece">
-            بازار مارجین
-          </span>
-        </b-nav-item>
-        <b-nav-item to="/perpetual-trade/BTCUSDT">
-          <span class="nav-link-inner--text" style="color: #cecece"
-            >بازار پرپشوال</span
-          >
-        </b-nav-item>
         <b-nav-item to="/wallets">
           <span class="nav-link-inner--text" style="color: #cecece"
             >کیف های من

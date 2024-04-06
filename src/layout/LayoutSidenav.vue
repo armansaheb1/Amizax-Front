@@ -58,13 +58,6 @@
       
 
       <sidenav-divider class="mb-1"/>
-      <sidenav-header class="small font-weight-semibold">معاملات لحظه ای</sidenav-header>
-      <sidenav-divider class="mb-1"/>
-      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/perpetual-trade/BTCUSDT" :exact="true">بازار پرپشوال</sidenav-router-link>
-      <sidenav-router-link icon="fa-solid fa-chart-simple" to="/margin-trade/BTCUSDT" :exact="true"> بازار مارجین</sidenav-router-link>
-
-
-      <sidenav-divider class="mb-1"/>
       <sidenav-header class="small font-weight-semibold">سوابق معاملات</sidenav-header>
       <sidenav-divider class="mb-1"/>
       <sidenav-router-link icon="fa-solid fa-spinner" to="/open-orders" :exact="true"> سفارشات باز داخلی</sidenav-router-link>

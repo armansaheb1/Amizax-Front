@@ -31,7 +31,7 @@ Vue.mixin({
 import router from './router';
 // plugin setup
 
-axios.defaults.baseURL = 'https://www.amizax.com/api/v1/'
+axios.defaults.baseURL = 'http://172.93.231.240/api/v1/'
 
 
 
